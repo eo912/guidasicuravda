@@ -23,7 +23,7 @@ const Metodo = () => {
           <div className="max-w-3xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground mb-8">
-                La formazione proposta da Guida Sicura BDA si basa su un metodo 
+                La formazione proposta da Guida Sicura VDA si basa su un metodo 
                 sviluppato per rispondere alle esigenze concrete di chi guida per lavoro. 
                 Non si tratta di guida sportiva o di performance, ma di sicurezza 
                 quotidiana applicata al contesto professionale.
@@ -119,9 +119,9 @@ const Metodo = () => {
                 Non è guida sportiva
               </h3>
               <p className="text-muted-foreground">
-                È importante chiarire che i corsi di Guida Sicura BDA non hanno 
+                È importante chiarire che i corsi di Guida Sicura VDA non hanno 
                 finalità sportive o agonistiche. L'approccio è esclusivamente 
-                formativo, orientato alla sicurezza sul lavoro e alla prevenzione 
+                formativo, orientato alla sicurezza sul lavoro e alla prevenzione
                 degli incidenti stradali in ambito professionale.
               </p>
             </div>
