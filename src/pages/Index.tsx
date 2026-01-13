@@ -19,7 +19,7 @@ const Index = () => {
         <div className="relative section-container py-20 md:py-32">
           <div className="max-w-2xl animate-slide-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 text-balance">
-              GUIDA SICURA BDA
+              GUIDA SICURA VDA
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 font-serif">
               Formazione pratica alla guida sicura per aziende e professionisti
@@ -50,10 +50,10 @@ const Index = () => {
         <div className="section-container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Formazione alla guida sicura in ambito lavorativo
+            Formazione alla guida sicura in ambito lavorativo
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Guida Sicura BDA propone corsi di formazione pratica rivolti a chi utilizza 
+              Guida Sicura VDA propone corsi di formazione pratica rivolti a chi utilizza 
               il veicolo come strumento di lavoro. L'obiettivo è sviluppare competenze 
               concrete per ridurre i rischi sulla strada.
             </p>
@@ -143,7 +143,7 @@ const Index = () => {
                 Inserimento in cataloghi formativi
               </h3>
               <p className="text-muted-foreground mb-6">
-                I corsi di Guida Sicura BDA sono strutturati per essere inseriti 
+                I corsi di Guida Sicura VDA sono strutturati per essere inseriti 
                 nei cataloghi formativi di associazioni di categoria e enti accreditati, 
                 come Confindustria e Confcommercio.
               </p>

@@ -13,7 +13,7 @@ const Footer = () => {
               </div>
               <div>
                 <span className="font-serif font-bold text-lg">GUIDA SICURA</span>
-                <span className="text-accent font-bold ml-1">BDA</span>
+                <span className="text-accent font-bold ml-1">VDA</span>
               </div>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
@@ -68,7 +68,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-10 pt-6">
           <p className="text-center text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} Guida Sicura BDA. Tutti i diritti riservati.
+            © {new Date().getFullYear()} Guida Sicura VDA. Tutti i diritti riservati.
           </p>
         </div>
       </div>

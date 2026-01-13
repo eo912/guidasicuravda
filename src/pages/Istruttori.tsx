@@ -24,7 +24,7 @@ const Istruttori = () => {
             {/* Important Notice */}
             <div className="p-6 bg-secondary rounded-lg mb-12">
               <p className="text-foreground leading-relaxed">
-                I corsi di Guida Sicura BDA sono erogati da istruttori di guida 
+                I corsi di Guida Sicura VDA sono erogati da istruttori di guida 
                 sicura che operano come liberi professionisti, in collaborazione.
               </p>
             </div>
