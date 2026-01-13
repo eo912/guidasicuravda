@@ -138,10 +138,7 @@ const Index = () => {
                 </li>
               </ul>
             </div>
-            <div className="bg-card rounded-lg p-8 card-professional flex flex-col items-center justify-center text-center">
-              <h3 className="text-xl font-bold text-foreground mb-6">
-                Inserimento in cataloghi formativi
-              </h3>
+            <div className="bg-card rounded-lg p-8 card-professional flex items-center justify-center">
               <Button variant="default" size="lg" asChild>
                 <Link to="/contatti">
                   Richiedi informazioni
