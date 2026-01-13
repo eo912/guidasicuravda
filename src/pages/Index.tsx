@@ -136,6 +136,24 @@ const Index = () => {
                     </p>
                   </div>
                 </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2.5 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-foreground">Enti e associazioni</span>
+                    <p className="text-muted-foreground text-sm">
+                      Organizzazioni che desiderano formare il proprio personale sulla sicurezza stradale
+                    </p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2.5 flex-shrink-0" />
+                  <div>
+                    <span className="font-semibold text-foreground">Flotte aziendali</span>
+                    <p className="text-muted-foreground text-sm">
+                      Fleet Manager e responsabili che gestiscono parchi veicoli aziendali
+                    </p>
+                  </div>
+                </li>
               </ul>
             </div>
             <div className="bg-card rounded-lg p-8 card-professional flex items-center justify-center">
