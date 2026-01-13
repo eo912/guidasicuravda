@@ -12,11 +12,11 @@ const courses = [
     destinatari: "Dipendenti di aziende, autisti, personale commerciale",
   },
   {
-    id: "guida-difensiva-emergenza",
-    title: "Corso di Guida Difensiva ed Emergenza",
-    description: "Formazione avanzata per affrontare situazioni impreviste sulla strada. Il corso sviluppa la capacità di prevenire e gestire condizioni critiche attraverso esercitazioni pratiche in ambiente controllato.",
+    id: "guida-sicura-difensiva",
+    title: "Corso di Guida Sicura Difensiva",
+    description: "Formazione per trasformare l'attitudine del conducente da passiva a proattiva, fornendo strumenti per identificare i pericoli prima che diventino emergenze e ottimizzare gli spazi di manovra.",
     icon: AlertTriangle,
-    destinatari: "Autisti professionisti, operatori di infrastrutture, responsabili flotte",
+    destinatari: "Dipendenti aziendali, quadri, dirigenti, autisti, RSPP",
   },
   {
     id: "guida-emergenza-ambulanze",
