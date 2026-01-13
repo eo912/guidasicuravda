@@ -38,7 +38,7 @@ const courseData: Record<string, {
     durata: {
       totale: "8 ore (giornata intera)",
       suddivisione: "1,5 ore di teoria tecnica, 6,5 ore di sessioni pratiche guidate",
-      partecipanti: "Massimo 12 allievi, al fine di garantire un rapporto costante con gli istruttori",
+      partecipanti: "Massimo 10 allievi, al fine di garantire un rapporto costante con gli istruttori",
     },
     programmaTeoria: [
       "Analisi dei dati sull'incidentalità stradale e focus sulle cause principali.",
