@@ -77,7 +77,7 @@ const courseData: Record<string, {
     durata: {
       totale: "8 ore (giornata singola)",
       suddivisione: "1,5 ore di teoria tecnica, 6,5 ore di sessioni pratiche in piazzale",
-      partecipanti: "Massimo 12 persone (rapporto istruttore/allievo 1:4 per garantire l'efficacia didattica)",
+      partecipanti: "Massimo 10 persone (rapporto istruttore/allievo 1:5 per garantire l'efficacia didattica)",
     },
     programmaTeoria: [
       "Fisica del veicolo: baricentro, cerchio di aderenza e impronta a terra dello pneumatico.",
