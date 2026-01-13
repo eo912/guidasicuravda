@@ -138,19 +138,11 @@ const Index = () => {
                 </li>
               </ul>
             </div>
-            <div className="bg-card rounded-lg p-8 card-professional">
-              <h3 className="text-xl font-bold text-foreground mb-4">
+            <div className="bg-card rounded-lg p-8 card-professional flex flex-col items-center justify-center text-center">
+              <h3 className="text-xl font-bold text-foreground mb-6">
                 Inserimento in cataloghi formativi
               </h3>
-              <p className="text-muted-foreground mb-6">
-                I corsi di Guida Sicura VDA sono strutturati per essere inseriti 
-                nei cataloghi formativi di associazioni di categoria e enti accreditati, 
-                come Confindustria e Confcommercio.
-              </p>
-              <p className="text-muted-foreground mb-6">
-                Contattaci per informazioni sulla compatibilità con i tuoi programmi formativi.
-              </p>
-              <Button variant="default" asChild>
+              <Button variant="default" size="lg" asChild>
                 <Link to="/contatti">
                   Richiedi informazioni
                 </Link>
