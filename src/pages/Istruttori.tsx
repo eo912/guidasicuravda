@@ -29,13 +29,13 @@ const Istruttori = () => {
               </p>
             </div>
 
-            {/* Instructors Placeholder */}
+            {/* Instructors */}
             <div className="space-y-8">
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Gli istruttori
               </h2>
               
-              {/* Instructor Card Template - to be filled */}
+              {/* Patrik Petigat */}
               <div className="card-professional">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
                   <div className="flex-shrink-0">
@@ -45,19 +45,21 @@ const Istruttori = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2">
-                      [Nome Istruttore]
+                      Patrik Petigat
                     </h3>
-                    <p className="text-muted-foreground mb-3">
-                      [Qualifica professionale]
+                    <p className="text-muted-foreground mb-4">
+                      Istruttore di guida S.S.O.T. (Sicura, Sportiva ed Operativa in emergenza – Test Driver)
                     </p>
-                    <p className="text-sm text-muted-foreground">
-                      [Breve descrizione dell'esperienza e delle competenze]
-                    </p>
-                    {/* Spazio per eventuale logo personale */}
+                    <div className="space-y-2 text-sm text-foreground/80">
+                      <p>Istruttore di guida con esperienza nelle autoscuole e nella formazione alla guida sicura, sportiva e operativa in emergenza.</p>
+                      <p>Opera come caposquadra autista presso il Traforo del Monte Bianco in ambito antincendio.</p>
+                      <p>Collabora alla formazione di operatori e conducenti professionali con un approccio pratico e orientato alla sicurezza.</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
+              {/* Orlarei Edy */}
               <div className="card-professional">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
                   <div className="flex-shrink-0">
@@ -67,26 +69,19 @@ const Istruttori = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2">
-                      [Nome Istruttore]
+                      Orlarei Edy
                     </h3>
-                    <p className="text-muted-foreground mb-3">
-                      [Qualifica professionale]
+                    <p className="text-muted-foreground mb-4">
+                      Istruttore di guida sicura e sportiva
                     </p>
-                    <p className="text-sm text-muted-foreground">
-                      [Breve descrizione dell'esperienza e delle competenze]
-                    </p>
+                    <div className="space-y-2 text-sm text-foreground/80">
+                      <p>Istruttore di guida sicura con attività legata alla gestione del veicolo in situazioni di emergenza.</p>
+                      <p>Caposquadra autista presso il Traforo del Monte Bianco, con attività di guida in emergenza in ambito antincendio.</p>
+                      <p>Svolge formazione orientata alla prevenzione del rischio e alla guida consapevole in ambito professionale.</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Note */}
-            <div className="mt-12 p-6 bg-muted rounded-lg">
-              <p className="text-sm text-muted-foreground">
-                Questa sezione verrà completata con i profili degli istruttori 
-                collaboratori. Ogni istruttore potrà inserire il proprio logo 
-                personale in questa pagina.
-              </p>
             </div>
 
             {/* CTA */}
