@@ -7,23 +7,47 @@ const courses = [
   {
     id: "guida-sicura-aziendale",
     title: "Corso Base di Guida Sicura Aziendale",
-    description: "Formazione alla guida sicura per dipendenti che utilizzano veicoli per lavoro. Un percorso pratico per acquisire consapevolezza dei rischi e migliorare le tecniche di guida in situazioni quotidiane.",
     icon: Car,
-    destinatari: "Dipendenti di aziende, autisti, personale commerciale",
+    descrizione: "Formazione pratica per chi guida per lavoro. Un percorso orientato al controllo del veicolo e alla gestione delle situazioni critiche più frequenti sulle strade.",
+    obiettivo: "Ridurre il rischio negli spostamenti lavorativi quotidiani attraverso il controllo del veicolo e la gestione delle situazioni critiche più comuni.",
+    focus: "Tecnica di guida e controllo del mezzo",
+    cosaSiImpara: [
+      "Corretta posizione di guida e impugnatura del volante",
+      "Frenata d'emergenza su fondo scivoloso",
+      "Gestione di sottosterzo e sovrasterzo",
+      "Utilizzo corretto dei sistemi di sicurezza attiva (ABS, ESP)",
+    ],
+    destinatari: "Dipendenti aziendali, personale commerciale, tecnici, fleet manager",
   },
   {
     id: "guida-sicura-difensiva",
     title: "Corso di Guida Sicura Difensiva",
-    description: "Formazione per trasformare l'attitudine del conducente da passiva a proattiva, fornendo strumenti per identificare i pericoli prima che diventino emergenze e ottimizzare gli spazi di manovra.",
     icon: AlertTriangle,
-    destinatari: "Dipendenti aziendali, quadri, dirigenti, autisti, RSPP",
+    descrizione: "Formazione mirata alla prevenzione dell'incidente. Un approccio proattivo per riconoscere i pericoli prima che diventino emergenze e adottare comportamenti di guida consapevoli.",
+    obiettivo: "Prevenire l'incidente attraverso l'anticipazione dei rischi, la lettura del contesto e l'adozione di comportamenti di guida consapevoli.",
+    focus: "Anticipazione del rischio e guida preventiva",
+    cosaSiImpara: [
+      "Tecniche di scansione visiva e osservazione avanzata",
+      "Gestione delle distanze di sicurezza dinamiche",
+      "Riconoscimento dei segnali premonitori di pericolo",
+      "Gestione dello stress e della pressione temporale",
+    ],
+    destinatari: "Quadri e dirigenti, autisti professionisti, RSPP, personale con elevato chilometraggio",
   },
   {
     id: "guida-emergenza-ambulanze",
     title: "Corso di Guida in Emergenza per Ambulanze",
-    description: "Corso specifico per operatori del soccorso sanitario. Formazione teorica e pratica sulla guida in condizioni di emergenza, con attenzione alla sicurezza del paziente e dell'equipaggio.",
     icon: Ambulance,
-    destinatari: "Autisti di ambulanza, operatori sanitari, personale 118",
+    descrizione: "Formazione specifica per operatori del soccorso sanitario. Un percorso dedicato alla guida in condizioni di emergenza, bilanciando rapidità operativa e sicurezza di equipaggio e paziente.",
+    obiettivo: "Gestire la guida in emergenza garantendo la sicurezza di operatori, paziente e utenti della strada, bilanciando rapidità e controllo del mezzo.",
+    focus: "Guida in emergenza e tutela del paziente",
+    cosaSiImpara: [
+      "Guida fluida per garantire stabilità nel vano sanitario",
+      "Uso corretto dei segnali acustici e luminosi",
+      "Attraversamento sicuro degli incroci in emergenza",
+      "Gestione di veicoli a baricentro alto e carichi variabili",
+    ],
+    destinatari: "Autisti soccorritori, personale 118, operatori sanitari su mezzi di emergenza",
   },
 ];
 
@@ -59,15 +83,39 @@ const Corsi = () => {
                       {course.title}
                     </h2>
                     <p className="text-muted-foreground mb-4">
-                      {course.description}
+                      {course.descrizione}
                     </p>
+                    
+                    <div className="mb-4 p-4 bg-secondary/50 rounded-lg">
+                      <p className="text-sm font-semibold text-foreground mb-1">Obiettivo</p>
+                      <p className="text-sm text-muted-foreground">{course.obiettivo}</p>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <p className="text-sm font-semibold text-foreground mb-1">Focus formativo</p>
+                      <p className="text-sm text-muted-foreground">{course.focus}</p>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <p className="text-sm font-semibold text-foreground mb-2">Cosa si impara</p>
+                      <ul className="space-y-1">
+                        {course.cosaSiImpara.map((item, index) => (
+                          <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
                     <p className="text-sm text-muted-foreground mb-4">
                       <span className="font-semibold text-foreground">Destinatari:</span>{" "}
                       {course.destinatari}
                     </p>
+                    
                     <Button variant="outline" asChild>
                       <Link to={`/corsi/${course.id}`}>
-                        Dettagli del corso
+                        Programma completo
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
