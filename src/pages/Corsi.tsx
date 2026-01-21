@@ -1,53 +1,54 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Car, AlertTriangle, Ambulance } from "lucide-react";
+import { ArrowRight, Car, Shield, Ambulance } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const courses = [
   {
-    id: "guida-sicura-aziendale",
-    title: "Corso Base di Guida Sicura Aziendale",
+    id: "guida-sicura-base",
+    title: "Corso di Guida Sicura Base",
     icon: Car,
-    descrizione: "Formazione pratica per chi guida per lavoro. Un percorso orientato al controllo del veicolo e alla gestione delle situazioni critiche più frequenti sulle strade.",
-    obiettivo: "Ridurre il rischio negli spostamenti lavorativi quotidiani attraverso il controllo del veicolo e la gestione delle situazioni critiche più comuni.",
-    focus: "Tecnica di guida e controllo del mezzo",
-    cosaSiImpara: [
-      "Corretta posizione di guida e impugnatura del volante",
-      "Frenata d'emergenza su fondo scivoloso",
-      "Gestione di sottosterzo e sovrasterzo",
-      "Utilizzo corretto dei sistemi di sicurezza attiva (ABS, ESP)",
+    finalita: "Prevenzione del rischio stradale e in itinere attraverso l'acquisizione delle tecniche fondamentali di guida sicura.",
+    durata: "6–8 ore",
+    partecipanti: "Massimo 8 partecipanti",
+    programma: [
+      "Guida preventiva e consapevole",
+      "Corretta postura e impugnatura del volante",
+      "Tecniche di frenata d'emergenza",
+      "Gestione delle situazioni critiche più comuni",
     ],
-    destinatari: "Dipendenti aziendali, personale commerciale, tecnici, fleet manager",
+    nota: "Corso introduttivo, ideale come primo intervento formativo in azienda.",
   },
   {
-    id: "guida-sicura-difensiva",
-    title: "Corso di Guida Sicura Difensiva",
-    icon: AlertTriangle,
-    descrizione: "Formazione mirata alla prevenzione dell'incidente. Un approccio proattivo per riconoscere i pericoli prima che diventino emergenze e adottare comportamenti di guida consapevoli.",
-    obiettivo: "Prevenire l'incidente attraverso l'anticipazione dei rischi, la lettura del contesto e l'adozione di comportamenti di guida consapevoli.",
-    focus: "Anticipazione del rischio e guida preventiva",
-    cosaSiImpara: [
-      "Tecniche di scansione visiva e osservazione avanzata",
-      "Gestione delle distanze di sicurezza dinamiche",
-      "Riconoscimento dei segnali premonitori di pericolo",
-      "Gestione dello stress e della pressione temporale",
+    id: "guida-sicura-avanzato",
+    title: "Corso Avanzato di Guida Sicura Aziendale",
+    icon: Shield,
+    finalita: "Sviluppare competenze avanzate di guida difensiva, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti.",
+    durata: "8 ore (2 ore teoria applicata + 6 ore pratica)",
+    partecipanti: "Massimo 8 partecipanti",
+    programma: [
+      "Guida difensiva: Visione, Spazio, Tempo",
+      "Percezione del rischio e bias cognitivi",
+      "Distanza di sicurezza e tempo di reazione",
+      "Gestione intersezioni e punti ciechi",
+      "Esercitazioni pratiche su visione, distanza, evitamento ostacoli",
     ],
-    destinatari: "Quadri e dirigenti, autisti professionisti, RSPP, personale con elevato chilometraggio",
+    nota: "Livello più alto del catalogo standard. Base di partenza per eventuali personalizzazioni.",
   },
   {
     id: "guida-emergenza-ambulanze",
-    title: "Corso di Guida in Emergenza per Ambulanze",
+    title: "Corso Guida Sicura Ambulanza / Emergenza",
     icon: Ambulance,
-    descrizione: "Formazione specifica per operatori del soccorso sanitario. Un percorso dedicato alla guida in condizioni di emergenza, bilanciando rapidità operativa e sicurezza di equipaggio e paziente.",
-    obiettivo: "Gestire la guida in emergenza garantendo la sicurezza di operatori, paziente e utenti della strada, bilanciando rapidità e controllo del mezzo.",
-    focus: "Guida in emergenza e tutela del paziente",
-    cosaSiImpara: [
-      "Guida fluida per garantire stabilità nel vano sanitario",
-      "Uso corretto dei segnali acustici e luminosi",
-      "Attraversamento sicuro degli incroci in emergenza",
-      "Gestione di veicoli a baricentro alto e carichi variabili",
+    finalita: "Gestione della guida in contesti di emergenza e alta responsabilità, garantendo sicurezza a operatori, paziente e utenti della strada.",
+    durata: "8 ore",
+    partecipanti: "Massimo 8 partecipanti",
+    programma: [
+      "Guida operativa in emergenza",
+      "Gestione del rischio specifico",
+      "Scenari critici e manovre di sicurezza",
+      "Coordinamento tra conducente ed equipaggio",
     ],
-    destinatari: "Autisti soccorritori, personale 118, operatori sanitari su mezzi di emergenza",
+    nota: "Corso specialistico destinato a operatori del soccorso sanitario.",
   },
 ];
 
@@ -60,8 +61,8 @@ const Corsi = () => {
           <h1 className="text-3xl md:text-4xl font-bold mb-4">I Corsi</h1>
           <p className="text-lg text-primary-foreground/80 max-w-2xl">
             Percorsi formativi strutturati per sviluppare competenze di guida sicura 
-            in ambito professionale. Ogni corso è modulabile e adattabile alle 
-            specifiche esigenze operative.
+            in ambito professionale. Ogni corso è progettato per rispondere alle 
+            esigenze operative delle aziende e può essere adattato a contesti specifici.
           </p>
         </div>
       </section>
@@ -82,24 +83,27 @@ const Corsi = () => {
                     <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">
                       {course.title}
                     </h2>
-                    <p className="text-muted-foreground mb-4">
-                      {course.descrizione}
-                    </p>
                     
                     <div className="mb-4 p-4 bg-secondary/50 rounded-lg">
-                      <p className="text-sm font-semibold text-foreground mb-1">Obiettivo</p>
-                      <p className="text-sm text-muted-foreground">{course.obiettivo}</p>
+                      <p className="text-sm font-semibold text-foreground mb-1">Finalità</p>
+                      <p className="text-sm text-muted-foreground">{course.finalita}</p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                      <div>
+                        <p className="text-sm font-semibold text-foreground mb-1">Durata</p>
+                        <p className="text-sm text-muted-foreground">{course.durata}</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-foreground mb-1">Partecipanti</p>
+                        <p className="text-sm text-muted-foreground">{course.partecipanti}</p>
+                      </div>
                     </div>
                     
                     <div className="mb-4">
-                      <p className="text-sm font-semibold text-foreground mb-1">Focus formativo</p>
-                      <p className="text-sm text-muted-foreground">{course.focus}</p>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <p className="text-sm font-semibold text-foreground mb-2">Cosa si impara</p>
+                      <p className="text-sm font-semibold text-foreground mb-2">Programma sintetico</p>
                       <ul className="space-y-1">
-                        {course.cosaSiImpara.map((item, index) => (
+                        {course.programma.map((item, index) => (
                           <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
                             <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
                             {item}
@@ -108,9 +112,8 @@ const Corsi = () => {
                       </ul>
                     </div>
                     
-                    <p className="text-sm text-muted-foreground mb-4">
-                      <span className="font-semibold text-foreground">Destinatari:</span>{" "}
-                      {course.destinatari}
+                    <p className="text-sm text-muted-foreground mb-4 italic">
+                      {course.nota}
                     </p>
                     
                     <Button variant="outline" asChild>
@@ -125,14 +128,14 @@ const Corsi = () => {
             ))}
           </div>
 
-          {/* Note */}
+          {/* Nota personalizzazione */}
           <div className="mt-12 p-6 bg-secondary rounded-lg">
-            <h3 className="font-semibold text-foreground mb-2">Corsi personalizzabili</h3>
+            <h3 className="font-semibold text-foreground mb-2">Personalizzazione dei corsi</h3>
             <p className="text-muted-foreground">
-              Tutti i corsi possono essere adattati al contesto operativo specifico: 
-              tipologia di veicoli utilizzati, ambiente di lavoro (urbano, montano, 
-              autostradale), livello di esperienza dei partecipanti. Contattaci per 
-              definire insieme il programma più adatto alle tue esigenze.
+              I corsi possono essere adattati o personalizzati in base alle esigenze 
+              operative dell'azienda: tipologia di veicoli, contesto di lavoro, 
+              livello di esperienza dei partecipanti. Le personalizzazioni vengono 
+              definite a seguito di colloquio conoscitivo.
             </p>
           </div>
         </div>
