@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="section-container py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
@@ -43,6 +43,23 @@ const Footer = () => {
               <li>
                 <Link to="/contatti" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors">
                   Contatti
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-semibold mb-4">Privacy & Legale</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/privacy-policy" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/cookie-policy" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors">
+                  Cookie Policy
                 </Link>
               </li>
             </ul>
