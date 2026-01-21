@@ -4,6 +4,7 @@ import { User } from "lucide-react";
 import Layout from "@/components/Layout";
 import patrikPhoto from "@/assets/patrik-petigat.jpg";
 import logoDrivexperience from "@/assets/logo-drivexperience.jpeg";
+import edyPhoto from "@/assets/orlarei-edy.jpg";
 
 const Istruttori = () => {
   return (
@@ -77,9 +78,11 @@ const Istruttori = () => {
               <div className="card-professional">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 bg-secondary rounded-lg flex items-center justify-center">
-                      <User className="h-12 w-12 text-muted-foreground" />
-                    </div>
+                    <img 
+                      src={edyPhoto} 
+                      alt="Orlarei Edy" 
+                      className="w-28 h-28 object-cover rounded-lg"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2">
