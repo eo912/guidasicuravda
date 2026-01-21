@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { User } from "lucide-react";
 import Layout from "@/components/Layout";
+import patrikPhoto from "@/assets/patrik-petigat.jpg";
+import logoDrivexperience from "@/assets/logo-drivexperience.jpeg";
 
 const Istruttori = () => {
   return (
@@ -39,11 +41,13 @@ const Istruttori = () => {
               <div className="card-professional">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 bg-secondary rounded-lg flex items-center justify-center">
-                      <User className="h-12 w-12 text-muted-foreground" />
-                    </div>
+                    <img 
+                      src={patrikPhoto} 
+                      alt="Patrik Petigat" 
+                      className="w-28 h-28 object-cover rounded-lg"
+                    />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="text-xl font-bold text-foreground mb-2">
                       Patrik Petigat
                     </h3>
@@ -54,6 +58,16 @@ const Istruttori = () => {
                       <p>Istruttore di guida con esperienza nelle autoscuole e nella formazione alla guida sicura, sportiva e operativa in emergenza.</p>
                       <p>Opera come caposquadra autista presso il Traforo del Monte Bianco in ambito antincendio.</p>
                       <p>Collabora alla formazione di operatori e conducenti professionali con un approccio pratico e orientato alla sicurezza.</p>
+                    </div>
+                    
+                    {/* Personal Project Logo */}
+                    <div className="mt-4 pt-4 border-t border-border">
+                      <p className="text-xs text-muted-foreground mb-2">Progetto personale</p>
+                      <img 
+                        src={logoDrivexperience} 
+                        alt="DriveXperience" 
+                        className="h-16 w-auto object-contain"
+                      />
                     </div>
                   </div>
                 </div>
