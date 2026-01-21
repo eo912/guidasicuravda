@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/Layout";
@@ -16,6 +18,7 @@ const Contatti = () => {
     azienda: "",
     messaggio: "",
   });
+  const [privacyConsent, setPrivacyConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -42,6 +45,7 @@ const Contatti = () => {
       azienda: "",
       messaggio: "",
     });
+    setPrivacyConsent(false);
     setIsSubmitting(false);
   };
 
@@ -201,12 +205,29 @@ const Contatti = () => {
                     />
                   </div>
 
+                  {/* Privacy Consent */}
+                  <div className="flex items-start gap-3">
+                    <Checkbox
+                      id="privacy"
+                      checked={privacyConsent}
+                      onCheckedChange={(checked) => setPrivacyConsent(checked === true)}
+                      className="mt-0.5"
+                    />
+                    <Label htmlFor="privacy" className="text-sm text-muted-foreground font-normal leading-relaxed cursor-pointer">
+                      Ho letto e accetto l'
+                      <Link to="/privacy-policy" className="text-primary hover:underline" target="_blank">
+                        informativa sulla privacy
+                      </Link>
+                      {" "}e acconsento al trattamento dei miei dati personali per rispondere alla mia richiesta. *
+                    </Label>
+                  </div>
+
                   <Button 
                     type="submit" 
                     variant="default" 
                     size="lg" 
                     className="w-full"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !privacyConsent}
                   >
                     {isSubmitting ? (
                       "Invio in corso..."
