@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Users, Shield, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
+import logoAssoformatori from "@/assets/logo-assoformatori.jpg";
+import logoCts from "@/assets/logo-cts.jpg";
+import logoRina from "@/assets/logo-rina-iso9001.jpg";
 
 const Metodo = () => {
   return (
@@ -124,6 +127,49 @@ const Metodo = () => {
                 formativo, orientato alla sicurezza sul lavoro e alla prevenzione
                 degli incidenti stradali in ambito professionale.
               </p>
+            </div>
+
+            {/* Sistema formativo di riferimento */}
+            <div className="mt-16 p-8 bg-muted/30 rounded-lg">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Sistema formativo di riferimento
+              </h3>
+              <div className="text-muted-foreground space-y-4 mb-8">
+                <p>
+                  Il metodo formativo di Guida Sicura VDA si sviluppa all'interno 
+                  di un sistema formativo strutturato e riconosciuto.
+                </p>
+                <p>
+                  La progettazione dei percorsi segue criteri di qualità, coerenza 
+                  didattica e validazione dei contenuti, in linea con gli standard 
+                  promossi dal sistema Assoformatori, rete nazionale di professionisti 
+                  della formazione.
+                </p>
+                <p>
+                  L'approccio garantisce percorsi formativi chiari, adattabili e 
+                  orientati all'efficacia reale, nel rispetto delle esigenze operative 
+                  delle aziende.
+                </p>
+              </div>
+              
+              {/* Loghi riferimenti formativi */}
+              <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+                <img 
+                  src={logoAssoformatori} 
+                  alt="Assoformatori" 
+                  className="h-14 md:h-16 w-auto object-contain"
+                />
+                <img 
+                  src={logoCts} 
+                  alt="CTS - Commissione Tecnico Scientifica" 
+                  className="h-10 md:h-12 w-auto object-contain"
+                />
+                <img 
+                  src={logoRina} 
+                  alt="RINA - ISO 9001 Certified Management System" 
+                  className="h-10 md:h-12 w-auto object-contain"
+                />
+              </div>
             </div>
 
             {/* CTA */}
