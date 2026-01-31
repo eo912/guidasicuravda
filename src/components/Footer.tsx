@@ -70,8 +70,8 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Contatti</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li>
-                <a href="mailto:info@guidasicurabda.it" className="hover:text-primary-foreground transition-colors">
-                  info@guidasicurabda.it
+                <a href="mailto:info@guidasicuravda.it" className="hover:text-primary-foreground transition-colors">
+                  info@guidasicuravda.it
                 </a>
               </li>
               <li>

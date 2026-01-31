@@ -54,7 +54,8 @@ const CookiePolicy = () => {
                     Questi cookie ci permettono di raccogliere dati anonimi sull'utilizzo 
                     del sito, come il numero di visitatori e le pagine più visualizzate. 
                     Le informazioni sono aggregate e anonime, e ci aiutano a migliorare 
-                    l'esperienza di navigazione. L'utilizzo di questi cookie richiede 
+                    l'esperienza di navigazione. Il sito utilizza Google Tag Manager per 
+                    la gestione dei tag di analisi. L'utilizzo di questi cookie richiede 
                     il tuo consenso.
                   </p>
                 </div>
