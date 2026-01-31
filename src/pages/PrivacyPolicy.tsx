@@ -70,7 +70,33 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-4">
-                  4. Base giuridica del trattamento
+                  4. Strumenti di analisi statistica
+                </h2>
+                <p className="text-muted-foreground mb-4">
+                  Il sito utilizza Google Analytics 4 (GA4), implementato tramite Google Tag Manager, 
+                  per raccogliere dati statistici aggregati e anonimi sulla navigazione. Le informazioni 
+                  raccolte includono: pagine visitate, durata della sessione, dispositivo utilizzato, 
+                  area geografica generica.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  I dati sono trattati in forma aggregata e non permettono l'identificazione diretta 
+                  dell'utente. L'attivazione di GA4 avviene solo previo consenso espresso tramite il 
+                  banner cookie.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  <strong>Responsabile del trattamento:</strong> Google Ireland Limited, Gordon House, 
+                  Barrow Street, Dublin 4, Irlanda.
+                </p>
+                <p className="text-muted-foreground">
+                  Non utilizziamo funzionalità di remarketing, pubblicità personalizzata o profilazione 
+                  comportamentale. I dati di analytics non sono incrociati con altre fonti né utilizzati 
+                  per finalità commerciali.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-foreground mb-4">
+                  5. Base giuridica del trattamento
                 </h2>
                 <p className="text-muted-foreground">
                   Il trattamento dei dati si basa sul consenso espresso dall'utente 
@@ -82,7 +108,7 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-4">
-                  5. Modalità di trattamento e conservazione
+                  6. Modalità di trattamento e conservazione
                 </h2>
                 <p className="text-muted-foreground">
                   I dati sono trattati con strumenti informatici e/o cartacei, con 
@@ -95,18 +121,20 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-4">
-                  6. Comunicazione e diffusione dei dati
+                  7. Comunicazione e diffusione dei dati
                 </h2>
                 <p className="text-muted-foreground">
                   I dati personali non vengono diffusi né comunicati a terzi, salvo 
-                  eventuali obblighi di legge. Non trasferiamo dati verso paesi 
-                  extra-UE.
+                  eventuali obblighi di legge o quanto indicato al punto 4 (Google Ireland Limited 
+                  per i dati di analytics). Non trasferiamo dati verso paesi extra-UE, ad eccezione 
+                  dei dati di analytics trattati da Google in conformità alle Clausole Contrattuali 
+                  Standard approvate dalla Commissione Europea.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-4">
-                  7. Diritti dell'interessato
+                  8. Diritti dell'interessato
                 </h2>
                 <p className="text-muted-foreground mb-4">
                   In qualità di interessato, hai il diritto di:
@@ -121,8 +149,8 @@ const PrivacyPolicy = () => {
                 </ul>
                 <p className="text-muted-foreground mt-4">
                   Per esercitare questi diritti, puoi contattarci all'indirizzo: 
-                  <a href="mailto:info@guidasicurabda.it" className="text-primary hover:underline ml-1">
-                    info@guidasicurabda.it
+                  <a href="mailto:info@guidasicuravda.it" className="text-primary hover:underline ml-1">
+                    info@guidasicuravda.it
                   </a>
                 </p>
                 <p className="text-muted-foreground mt-4">
@@ -133,7 +161,7 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-4">
-                  8. Aggiornamenti
+                  9. Aggiornamenti
                 </h2>
                 <p className="text-muted-foreground">
                   La presente informativa può essere aggiornata. Eventuali modifiche 
