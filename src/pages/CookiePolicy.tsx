@@ -39,24 +39,34 @@ const CookiePolicy = () => {
                 </p>
                 
                 <div className="bg-muted/30 p-6 rounded-lg mb-4">
-                  <h3 className="font-semibold text-foreground mb-2">Cookie tecnici</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Sono cookie necessari per il corretto funzionamento del sito. 
-                    Non richiedono il consenso dell'utente e non possono essere 
-                    disabilitati. Includono cookie per la gestione delle preferenze 
-                    di consenso e per il funzionamento base del sito.
+                  <h3 className="font-semibold text-foreground mb-2">Cookie tecnici (necessari)</h3>
+                  <p className="text-muted-foreground text-sm mb-2">
+                    Sono cookie essenziali per il corretto funzionamento del sito. 
+                    Non richiedono il consenso dell'utente e non possono essere disabilitati.
                   </p>
+                  <ul className="text-muted-foreground text-sm list-disc pl-5 space-y-1">
+                    <li><strong>gsvda_cookie_consent</strong> – memorizza le preferenze di consenso cookie (durata: 12 mesi)</li>
+                  </ul>
                 </div>
 
                 <div className="bg-muted/30 p-6 rounded-lg">
-                  <h3 className="font-semibold text-foreground mb-2">Cookie di analisi (statistici)</h3>
-                  <p className="text-muted-foreground text-sm">
-                    Questi cookie ci permettono di raccogliere dati anonimi sull'utilizzo 
-                    del sito, come il numero di visitatori e le pagine più visualizzate. 
-                    Le informazioni sono aggregate e anonime, e ci aiutano a migliorare 
-                    l'esperienza di navigazione. Il sito utilizza Google Tag Manager per 
-                    la gestione dei tag di analisi. L'utilizzo di questi cookie richiede 
-                    il tuo consenso.
+                  <h3 className="font-semibold text-foreground mb-2">Cookie di analisi (Google Analytics 4)</h3>
+                  <p className="text-muted-foreground text-sm mb-2">
+                    Questi cookie sono installati da Google Analytics 4 (GA4), implementato tramite 
+                    Google Tag Manager, e vengono attivati solo previo consenso espresso dell'utente.
+                  </p>
+                  <p className="text-muted-foreground text-sm mb-2">
+                    Raccolgono dati statistici aggregati e anonimi sulla navigazione: pagine visitate, 
+                    durata della sessione, dispositivo utilizzato, area geografica generica. 
+                    Non permettono l'identificazione diretta dell'utente.
+                  </p>
+                  <ul className="text-muted-foreground text-sm list-disc pl-5 space-y-1">
+                    <li><strong>_ga</strong> – identificatore anonimo per distinguere gli utenti (durata: 2 anni)</li>
+                    <li><strong>_ga_*</strong> – mantiene lo stato della sessione (durata: 2 anni)</li>
+                  </ul>
+                  <p className="text-muted-foreground text-sm mt-2">
+                    <strong>Responsabile del trattamento:</strong> Google Ireland Limited, Gordon House, 
+                    Barrow Street, Dublin 4, Irlanda.
                   </p>
                 </div>
               </div>
@@ -69,10 +79,11 @@ const CookiePolicy = () => {
                   Per trasparenza, specifichiamo che questo sito:
                 </p>
                 <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                  <li>Non utilizza cookie di profilazione</li>
-                  <li>Non utilizza cookie di marketing o pubblicitari</li>
+                  <li>Non utilizza cookie di profilazione comportamentale</li>
+                  <li>Non utilizza cookie di marketing, remarketing o pubblicitari</li>
                   <li>Non utilizza cookie di terze parti per tracciamento cross-site</li>
                   <li>Non condivide dati di navigazione con piattaforme pubblicitarie</li>
+                  <li>Non attiva funzionalità di personalizzazione pubblicitaria in GA4</li>
                 </ul>
               </div>
 
