@@ -35,7 +35,7 @@ const CookiePolicy = () => {
                   Cookie utilizzati su questo sito
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  Il sito Guida Sicura VDA utilizza esclusivamente:
+                  Il sito Guida Sicura VDA utilizza le seguenti tipologie di cookie:
                 </p>
                 
                 <div className="bg-muted/30 p-6 rounded-lg mb-4">
