@@ -136,19 +136,16 @@ const Metodo = () => {
               </h3>
               <div className="text-muted-foreground space-y-4 mb-8">
                 <p>
-                  Il metodo formativo di Guida Sicura VDA si sviluppa all'interno 
-                  di un sistema formativo strutturato e riconosciuto.
+                  Il progetto Guida Sicura VDA si basa su contenuti formativi certificati 
+                  Assoformatori, erogati tramite la relativa piattaforma.
                 </p>
                 <p>
-                  La progettazione dei percorsi segue criteri di qualità, coerenza 
-                  didattica e validazione dei contenuti, in linea con gli standard 
-                  promossi dal sistema Assoformatori, rete nazionale di professionisti 
-                  della formazione.
+                  L'impianto del corso, le variabili operative e i materiali di supporto 
+                  sono progettati e rielaborati nell'ambito del progetto Guida Sicura VDA.
                 </p>
                 <p>
-                  L'approccio garantisce percorsi formativi chiari, adattabili e 
-                  orientati all'efficacia reale, nel rispetto delle esigenze operative 
-                  delle aziende.
+                  I corsi sono erogati da istruttori qualificati che operano all'interno 
+                  del progetto.
                 </p>
               </div>
               
