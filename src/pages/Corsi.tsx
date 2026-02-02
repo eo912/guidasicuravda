@@ -20,20 +20,22 @@ const courses = [
     nota: "Corso introduttivo, ideale come primo intervento formativo in azienda.",
   },
   {
-    id: "guida-sicura-avanzato",
-    title: "Corso Avanzato di Guida Sicura Aziendale",
+    id: "guida-sicura-secondo-livello",
+    title: "Guida Sicura – 2° Livello",
+    subtitle: "Formazione avanzata modulare per contesti professionali",
     icon: Shield,
-    finalita: "Sviluppare competenze avanzate di guida difensiva, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti.",
+    finalita: "Sviluppare competenze avanzate di guida sicura, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti. Questo corso rappresenta il livello più alto del catalogo standard ed è la base di partenza per eventuali personalizzazioni.",
     durata: "8 ore (2 ore teoria applicata + 6 ore pratica)",
     partecipanti: "Massimo 8 partecipanti",
     programma: [
-      "Guida difensiva: Visione, Spazio, Tempo",
+      "Guida preventiva: Visione, Spazio, Tempo",
       "Percezione del rischio e bias cognitivi",
       "Distanza di sicurezza e tempo di reazione",
       "Gestione intersezioni e punti ciechi",
       "Esercitazioni pratiche su visione, distanza, evitamento ostacoli",
     ],
-    nota: "Livello più alto del catalogo standard. Base di partenza per eventuali personalizzazioni.",
+    nota: "Livello più alto del catalogo standard. Può essere integrato con moduli opzionali.",
+    hasModules: true,
   },
   {
     id: "guida-emergenza-ambulanze",
@@ -51,6 +53,33 @@ const courses = [
     nota: "Corso specialistico destinato a operatori del soccorso sanitario.",
   },
 ];
+
+const moduliOpzionali = {
+  contesto: [
+    "Guida in ambiente urbano",
+    "Guida extraurbana e autostradale",
+    "Guida in condizioni invernali",
+    "Guida notturna",
+  ],
+  profilo: [
+    "Conducenti neoassunti",
+    "Conducenti con elevato chilometraggio",
+    "Quadri e dirigenti",
+    "Personale tecnico operativo",
+  ],
+  veicolo: [
+    "Veicoli commerciali leggeri",
+    "Furgoni e van",
+    "Sistemi ADAS e guida assistita",
+    "Veicoli elettrici e ibridi",
+  ],
+  operativo: [
+    "Trasporto merci sensibili",
+    "Interventi in emergenza",
+    "Gestione flotte aziendali",
+    "Logistica e consegne",
+  ],
+};
 
 const Corsi = () => {
   return (
@@ -80,9 +109,14 @@ const Corsi = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                    <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1">
                       {course.title}
                     </h2>
+                    {course.subtitle && (
+                      <p className="text-sm text-accent font-medium mb-3">
+                        {course.subtitle}
+                      </p>
+                    )}
                     
                     <div className="mb-4 p-4 bg-secondary/50 rounded-lg">
                       <p className="text-sm font-semibold text-foreground mb-1">Finalità</p>
@@ -126,6 +160,86 @@ const Corsi = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Moduli Opzionali Section */}
+          <div className="mt-16">
+            <div className="card-professional">
+              <h2 className="text-2xl font-bold text-foreground mb-4">
+                Moduli opzionali
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                I moduli opzionali sono attivabili solo su richiesta e non sono obbligatori. 
+                Permettono di personalizzare il percorso formativo in base al contesto aziendale, 
+                al profilo dei partecipanti e alle specifiche esigenze operative.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Moduli di contesto */}
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-3">
+                    Moduli di contesto
+                  </h3>
+                  <ul className="space-y-2">
+                    {moduliOpzionali.contesto.map((modulo, index) => (
+                      <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                        {modulo}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Moduli di profilo */}
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-3">
+                    Moduli di profilo
+                  </h3>
+                  <ul className="space-y-2">
+                    {moduliOpzionali.profilo.map((modulo, index) => (
+                      <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                        {modulo}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Moduli di veicolo / tecnologia */}
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-3">
+                    Moduli di veicolo / tecnologia
+                  </h3>
+                  <ul className="space-y-2">
+                    {moduliOpzionali.veicolo.map((modulo, index) => (
+                      <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                        {modulo}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Moduli di contesto operativo */}
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-3">
+                    Moduli di contesto operativo
+                  </h3>
+                  <ul className="space-y-2">
+                    {moduliOpzionali.operativo.map((modulo, index) => (
+                      <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                        {modulo}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <p className="text-sm text-muted-foreground mt-6 italic">
+                I moduli vengono definiti a seguito di colloquio conoscitivo con l'azienda.
+              </p>
+            </div>
           </div>
 
           {/* Nota personalizzazione */}

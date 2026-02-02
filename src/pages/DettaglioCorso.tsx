@@ -47,17 +47,17 @@ const courseData: Record<string, {
     ],
     nota: "Corso introduttivo, ideale come primo intervento formativo in azienda. Può essere propedeutico al corso avanzato.",
   },
-  "guida-sicura-avanzato": {
-    title: "Corso Avanzato di Guida Sicura Aziendale",
-    subtitle: "Guida difensiva e percezione del rischio",
-    finalita: "Sviluppare competenze avanzate di guida difensiva, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti. Questo corso rappresenta il livello più alto del catalogo standard ed è la base di partenza per eventuali personalizzazioni.",
+  "guida-sicura-secondo-livello": {
+    title: "Guida Sicura – 2° Livello",
+    subtitle: "Formazione avanzata modulare per contesti professionali",
+    finalita: "Sviluppare competenze avanzate di guida sicura, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti. Questo corso rappresenta il livello più alto del catalogo standard ed è la base di partenza per eventuali personalizzazioni tramite moduli opzionali.",
     durata: {
       totale: "8 ore (giornata intera)",
       suddivisione: "2 ore di teoria applicata, 6 ore di pratica su piazzale e percorsi simulati",
       partecipanti: "Massimo 8 partecipanti per sessione",
     },
     programmaTeoria: [
-      "I pilastri della guida difensiva: Visione, Spazio, Tempo",
+      "I pilastri della guida preventiva: Visione, Spazio, Tempo",
       "Percezione del rischio e bias cognitivi del conducente",
       "Distanza di sicurezza e tempo di reazione",
       "Gestione delle intersezioni e dei punti ciechi",
@@ -78,7 +78,7 @@ const courseData: Record<string, {
       "Fleet Manager e responsabili parco auto",
       "Personale addetto al trasporto persone o merci leggere",
     ],
-    nota: "Livello più alto del catalogo standard. Rappresenta la base di partenza per eventuali personalizzazioni in base alle esigenze operative specifiche dell'azienda.",
+    nota: "Livello più alto del catalogo standard. Può essere integrato con moduli opzionali definiti in base alle esigenze operative specifiche dell'azienda.",
   },
   "guida-emergenza-ambulanze": {
     title: "Corso Guida Sicura Ambulanza / Emergenza",
