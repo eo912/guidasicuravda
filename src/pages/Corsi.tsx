@@ -9,7 +9,7 @@ const courses = [
     title: "Corso di Guida Sicura Base",
     icon: Car,
     finalita: "Prevenzione del rischio stradale e in itinere attraverso l'acquisizione delle tecniche fondamentali di guida sicura.",
-    durata: "6–8 ore",
+    durata: "8 ore",
     partecipanti: "Massimo 8 partecipanti",
     programma: [
       "Guida preventiva e consapevole",
