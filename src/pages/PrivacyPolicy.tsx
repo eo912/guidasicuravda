@@ -25,9 +25,10 @@ const PrivacyPolicy = () => {
                 </h2>
                 <p className="text-muted-foreground">
                   Il Titolare del trattamento dei dati personali è Guida Sicura VDA, 
-                  con sede operativa in Valle d'Aosta, raggiungibile all'indirizzo email: 
-                  <a href="mailto:info@guidasicurabda.it" className="text-primary hover:underline ml-1">
-                    info@guidasicurabda.it
+                  progetto ideato e sviluppato da Orlarei Edy, attualmente in fase di avvio, 
+                  contattabile all'indirizzo email: 
+                  <a href="mailto:info@guidasicuravda.it" className="text-primary hover:underline ml-1">
+                    info@guidasicuravda.it
                   </a>
                 </p>
               </div>
@@ -73,24 +74,35 @@ const PrivacyPolicy = () => {
                   4. Strumenti di analisi statistica
                 </h2>
                 <p className="text-muted-foreground mb-4">
-                  Il sito utilizza Google Analytics 4 (GA4), implementato tramite Google Tag Manager, 
-                  per raccogliere dati statistici aggregati e anonimi sulla navigazione. Le informazioni 
-                  raccolte includono: pagine visitate, durata della sessione, dispositivo utilizzato, 
-                  area geografica generica.
+                  Il sito utilizza i seguenti strumenti di analisi, attivati solo previo consenso 
+                  espresso tramite il banner cookie:
                 </p>
+                
                 <p className="text-muted-foreground mb-4">
-                  I dati sono trattati in forma aggregata e non permettono l'identificazione diretta 
-                  dell'utente. L'attivazione di GA4 avviene solo previo consenso espresso tramite il 
-                  banner cookie.
+                  <strong>Google Analytics 4 (GA4)</strong> – implementato tramite Google Tag Manager 
+                  (utilizzato esclusivamente come contenitore tecnico) – per raccogliere dati statistici 
+                  aggregati e anonimi sulla navigazione: pagine visitate, durata della sessione, 
+                  dispositivo utilizzato, area geografica generica.
                 </p>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  Responsabile del trattamento: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irlanda.
+                </p>
+
                 <p className="text-muted-foreground mb-4">
-                  <strong>Responsabile del trattamento:</strong> Google Ireland Limited, Gordon House, 
-                  Barrow Street, Dublin 4, Irlanda.
+                  <strong>Microsoft Clarity</strong> – strumento di analisi comportamentale che registra 
+                  interazioni anonime (movimenti del mouse, scroll, clic) per comprendere l'utilizzo 
+                  del sito e migliorarne l'usabilità.
                 </p>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  Responsabile del trattamento: Microsoft Ireland Operations Limited, One Microsoft Place, 
+                  South County Business Park, Leopardstown, Dublin 18, Irlanda.
+                </p>
+
                 <p className="text-muted-foreground">
-                  Non utilizziamo funzionalità di remarketing, pubblicità personalizzata o profilazione 
-                  comportamentale. I dati di analytics non sono incrociati con altre fonti né utilizzati 
-                  per finalità commerciali.
+                  I dati sono trattati in forma aggregata e non permettono l'identificazione diretta 
+                  dell'utente. Non utilizziamo funzionalità di remarketing, pubblicità personalizzata 
+                  o profilazione comportamentale. I dati di analytics non sono incrociati con altre 
+                  fonti né condivisi con piattaforme pubblicitarie.
                 </p>
               </div>
 
@@ -126,9 +138,9 @@ const PrivacyPolicy = () => {
                 <p className="text-muted-foreground">
                   I dati personali non vengono diffusi né comunicati a terzi, salvo 
                   eventuali obblighi di legge o quanto indicato al punto 4 (Google Ireland Limited 
-                  per i dati di analytics). Non trasferiamo dati verso paesi extra-UE, ad eccezione 
-                  dei dati di analytics trattati da Google in conformità alle Clausole Contrattuali 
-                  Standard approvate dalla Commissione Europea.
+                  e Microsoft Ireland Operations Limited per i dati di analytics). Non trasferiamo 
+                  dati verso paesi extra-UE, ad eccezione dei dati di analytics trattati in conformità 
+                  alle Clausole Contrattuali Standard approvate dalla Commissione Europea.
                 </p>
               </div>
 

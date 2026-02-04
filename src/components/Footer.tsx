@@ -83,9 +83,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-10 pt-6">
+        <div className="border-t border-primary-foreground/10 mt-10 pt-6 space-y-2">
           <p className="text-center text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} Guida Sicura VDA. Tutti i diritti riservati.
+            © {new Date().getFullYear()} Guida Sicura VDA – Progetto ideato e sviluppato da Orlarei Edy.
+          </p>
+          <p className="text-center text-xs text-primary-foreground/40">
+            Attività in fase di avvio. I servizi formativi sono erogati da istruttori qualificati in collaborazione.
           </p>
         </div>
       </div>
