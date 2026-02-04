@@ -49,11 +49,12 @@ const CookiePolicy = () => {
                   </ul>
                 </div>
 
-                <div className="bg-muted/30 p-6 rounded-lg">
-                  <h3 className="font-semibold text-foreground mb-2">Cookie di analisi (Google Analytics 4)</h3>
+                <div className="bg-muted/30 p-6 rounded-lg mb-4">
+                  <h3 className="font-semibold text-foreground mb-2">Cookie di analisi – Google Analytics 4</h3>
                   <p className="text-muted-foreground text-sm mb-2">
                     Questi cookie sono installati da Google Analytics 4 (GA4), implementato tramite 
-                    Google Tag Manager, e vengono attivati solo previo consenso espresso dell'utente.
+                    Google Tag Manager (utilizzato esclusivamente come contenitore tecnico), 
+                    e vengono attivati solo previo consenso espresso dell'utente.
                   </p>
                   <p className="text-muted-foreground text-sm mb-2">
                     Raccolgono dati statistici aggregati e anonimi sulla navigazione: pagine visitate, 
@@ -61,12 +62,30 @@ const CookiePolicy = () => {
                     Non permettono l'identificazione diretta dell'utente.
                   </p>
                   <ul className="text-muted-foreground text-sm list-disc pl-5 space-y-1">
-                    <li><strong>_ga</strong> – identificatore anonimo per distinguere gli utenti (durata: 2 anni)</li>
+                    <li><strong>_ga</strong> – identificatore anonimo per distinguire gli utenti (durata: 2 anni)</li>
                     <li><strong>_ga_*</strong> – mantiene lo stato della sessione (durata: 2 anni)</li>
                   </ul>
                   <p className="text-muted-foreground text-sm mt-2">
                     <strong>Responsabile del trattamento:</strong> Google Ireland Limited, Gordon House, 
                     Barrow Street, Dublin 4, Irlanda.
+                  </p>
+                </div>
+
+                <div className="bg-muted/30 p-6 rounded-lg">
+                  <h3 className="font-semibold text-foreground mb-2">Cookie di analisi – Microsoft Clarity</h3>
+                  <p className="text-muted-foreground text-sm mb-2">
+                    Microsoft Clarity è uno strumento di analisi comportamentale che registra 
+                    interazioni anonime (movimenti del mouse, scroll, clic) per comprendere 
+                    l'utilizzo del sito e migliorarne l'usabilità. Viene attivato solo previo 
+                    consenso espresso dell'utente.
+                  </p>
+                  <ul className="text-muted-foreground text-sm list-disc pl-5 space-y-1">
+                    <li><strong>_clck</strong> – identificatore anonimo (durata: 12 mesi)</li>
+                    <li><strong>_clsk</strong> – mantiene lo stato della sessione (durata: 1 giorno)</li>
+                  </ul>
+                  <p className="text-muted-foreground text-sm mt-2">
+                    <strong>Responsabile del trattamento:</strong> Microsoft Ireland Operations Limited, 
+                    One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irlanda.
                   </p>
                 </div>
               </div>
