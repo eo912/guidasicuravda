@@ -12,8 +12,8 @@ const courseData: Record<string, {
     suddivisione: string;
     partecipanti: string;
   };
-  programmaTeoria: string[];
-  programmaPratica: string[];
+  contenuti: string[];
+  attivita: string[];
   destinatari: string[];
   nota: string;
 }> = {
@@ -26,13 +26,13 @@ const courseData: Record<string, {
       suddivisione: "1,5 ore di teoria, 4,5–6,5 ore di pratica guidata",
       partecipanti: "Massimo 8 partecipanti per sessione",
     },
-    programmaTeoria: [
+    contenuti: [
       "Dati sull'incidentalità stradale e principali fattori di rischio",
       "Principi di guida preventiva e consapevole",
       "Postura corretta e impugnatura del volante",
       "Funzionamento dei sistemi di sicurezza attiva (ABS, ESP)",
     ],
-    programmaPratica: [
+    attivita: [
       "Regolazione ottimale della posizione di guida",
       "Tecniche di frenata d'emergenza",
       "Gestione del veicolo su fondo scivoloso",
@@ -52,18 +52,18 @@ const courseData: Record<string, {
     subtitle: "Formazione avanzata modulare per contesti professionali",
     finalita: "Sviluppare competenze avanzate di guida sicura, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti. Questo corso rappresenta il livello più alto del catalogo standard ed è la base di partenza per eventuali personalizzazioni tramite moduli opzionali.",
     durata: {
-      totale: "8 ore (giornata intera)",
-      suddivisione: "2 ore di teoria applicata, 6 ore di pratica su piazzale e percorsi simulati",
+      totale: "16 ore",
+      suddivisione: "Percorso integrato con attività in aula e sessioni pratiche su piazzale e percorsi simulati",
       partecipanti: "Massimo 8 partecipanti per sessione",
     },
-    programmaTeoria: [
+    contenuti: [
       "I pilastri della guida preventiva: Visione, Spazio, Tempo",
       "Percezione del rischio e bias cognitivi del conducente",
       "Distanza di sicurezza e tempo di reazione",
       "Gestione delle intersezioni e dei punti ciechi",
       "Fattori di distrazione e gestione dello stress alla guida",
     ],
-    programmaPratica: [
+    attivita: [
       "Esercitazioni di visione periferica e scansione attiva",
       "Mantenimento della distanza di sicurezza dinamica",
       "Evitamento di ostacoli improvvisi",
@@ -85,18 +85,18 @@ const courseData: Record<string, {
     subtitle: "Guida in emergenza e tutela del paziente",
     finalita: "Gestione della guida in contesti di emergenza e alta responsabilità, garantendo sicurezza a operatori, paziente e utenti della strada. Il corso bilancia la necessità di rapidità operativa con il controllo del mezzo e la tutela di tutte le persone coinvolte.",
     durata: {
-      totale: "8 ore (giornata intera)",
-      suddivisione: "1,5 ore di teoria specifica, 6,5 ore di sessioni pratiche dinamiche",
+      totale: "16 ore",
+      suddivisione: "Percorso integrato con attività in aula e sessioni pratiche dinamiche",
       partecipanti: "Massimo 8 partecipanti per sessione",
     },
-    programmaTeoria: [
+    contenuti: [
       "Normativa: diritti e doveri del conducente in emergenza (Artt. 177 e 141 C.d.S.)",
       "Dinamica dei mezzi pesanti: masse, baricentro, oscillazioni",
       "Ergonomia in cabina e strumentazione di bordo",
       "Coordinamento tra conducente ed equipaggio sanitario",
       "Gestione del rischio specifico nei contesti di emergenza",
     ],
-    programmaPratica: [
+    attivita: [
       "Tecnica di sterzata progressiva per ridurre il rollio",
       "Guida fluida per garantire stabilità nel vano sanitario",
       "Slalom di precisione con gestione trasferimenti di carico",
@@ -172,12 +172,12 @@ const DettaglioCorso = () => {
               </div>
             </div>
 
-            {/* Programma teorico */}
+            {/* Contenuti formativi */}
             <div className="mb-10">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Programma teorico</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Contenuti formativi</h2>
               <div className="card-professional">
                 <ul className="space-y-2">
-                  {course.programmaTeoria.map((item, index) => (
+                  {course.contenuti.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                       <span className="text-muted-foreground">{item}</span>
@@ -187,12 +187,12 @@ const DettaglioCorso = () => {
               </div>
             </div>
 
-            {/* Programma pratico */}
+            {/* Attività previste */}
             <div className="mb-10">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Programma pratico</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">Attività previste</h2>
               <div className="card-professional">
                 <ul className="space-y-2">
-                  {course.programmaPratica.map((item, index) => (
+                  {course.attivita.map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                       <span className="text-muted-foreground">{item}</span>
