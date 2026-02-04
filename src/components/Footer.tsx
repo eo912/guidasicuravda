@@ -68,24 +68,21 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-4">Contatti</h4>
-            <ul className="space-y-2 text-sm text-primary-foreground/70">
-              <li>
-                <a href="mailto:info@guidasicuravda.it" className="hover:text-primary-foreground transition-colors">
-                  info@guidasicuravda.it
-                </a>
-              </li>
-              <li>
-                <a href="tel:+390000000000" className="hover:text-primary-foreground transition-colors">
-                  +39 000 000 0000
-                </a>
-              </li>
-            </ul>
+            <p className="text-primary-foreground/70 text-sm mb-2">
+              Per informazioni sui corsi e sulle modalità di erogazione:
+            </p>
+            <a 
+              href="mailto:eo84.EO@gmail.com" 
+              className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors"
+            >
+              eo84.EO@gmail.com
+            </a>
           </div>
         </div>
 
         <div className="border-t border-primary-foreground/10 mt-10 pt-6 space-y-2">
           <p className="text-center text-sm text-primary-foreground/50">
-            © {new Date().getFullYear()} Guida Sicura VDA – Progetto ideato e sviluppato da Orlarei Edy.
+            © 2026 Guida Sicura VDA – Progetto ideato e sviluppato da Orlarei Edy.
           </p>
           <p className="text-center text-xs text-primary-foreground/40">
             Attività in fase di avvio. I servizi formativi sono erogati da istruttori qualificati in collaborazione.

@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/Layout";
 
@@ -84,26 +84,14 @@ const Contatti = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                    <p className="text-muted-foreground text-sm mb-1">
+                      Per informazioni sui corsi e sulle modalità di erogazione:
+                    </p>
                     <a 
-                      href="mailto:info@guidasicurabda.it" 
+                      href="mailto:eo84.EO@gmail.com" 
                       className="text-muted-foreground hover:text-foreground transition-colors"
                     >
-                      info@guidasicurabda.it
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Telefono</h3>
-                    <a 
-                      href="tel:+390000000000" 
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      +39 000 000 0000
+                      eo84.EO@gmail.com
                     </a>
                   </div>
                 </div>

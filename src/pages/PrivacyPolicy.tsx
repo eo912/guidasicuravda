@@ -25,10 +25,10 @@ const PrivacyPolicy = () => {
                 </h2>
                 <p className="text-muted-foreground">
                   Il Titolare del trattamento dei dati personali è Guida Sicura VDA, 
-                  progetto ideato e sviluppato da Orlarei Edy, attualmente in fase di avvio, 
-                  contattabile all'indirizzo email: 
-                  <a href="mailto:info@guidasicuravda.it" className="text-primary hover:underline ml-1">
-                    info@guidasicuravda.it
+                  progetto ideato e sviluppato da Orlarei Edy, attualmente in fase di avvio. 
+                  Per qualsiasi richiesta è possibile contattare il titolare all'indirizzo: 
+                  <a href="mailto:eo84.EO@gmail.com" className="text-primary hover:underline ml-1">
+                    eo84.EO@gmail.com
                   </a>
                 </p>
               </div>
@@ -161,8 +161,8 @@ const PrivacyPolicy = () => {
                 </ul>
                 <p className="text-muted-foreground mt-4">
                   Per esercitare questi diritti, puoi contattarci all'indirizzo: 
-                  <a href="mailto:info@guidasicuravda.it" className="text-primary hover:underline ml-1">
-                    info@guidasicuravda.it
+                  <a href="mailto:eo84.EO@gmail.com" className="text-primary hover:underline ml-1">
+                    eo84.EO@gmail.com
                   </a>
                 </p>
                 <p className="text-muted-foreground mt-4">

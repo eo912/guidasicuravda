@@ -144,8 +144,8 @@ const CookiePolicy = () => {
                 </h2>
                 <p className="text-muted-foreground">
                   Per domande relative a questa Cookie Policy, puoi contattarci all'indirizzo: 
-                  <a href="mailto:info@guidasicurabda.it" className="text-primary hover:underline ml-1">
-                    info@guidasicurabda.it
+                  <a href="mailto:eo84.EO@gmail.com" className="text-primary hover:underline ml-1">
+                    eo84.EO@gmail.com
                   </a>
                 </p>
               </div>
