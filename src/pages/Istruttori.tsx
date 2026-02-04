@@ -90,7 +90,7 @@ const Istruttori = () => {
                       Orlarei Edy
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                      Istruttore di guida sicura
+                      Istruttore di guida sicura – Associato Assoformatori
                     </p>
                     <div className="space-y-2 text-sm text-foreground/80">
                       <p>Istruttore di guida sicura con attività legata alla gestione del veicolo in situazioni di emergenza.</p>

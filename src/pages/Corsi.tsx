@@ -25,7 +25,7 @@ const courses = [
     subtitle: "Formazione avanzata modulare per contesti professionali",
     icon: Shield,
     finalita: "Sviluppare competenze avanzate di guida sicura, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti. Questo corso rappresenta il livello più alto del catalogo standard ed è la base di partenza per eventuali personalizzazioni.",
-    durata: "8 ore (2 ore teoria applicata + 6 ore pratica)",
+    durata: "16 ore",
     partecipanti: "Massimo 8 partecipanti",
     programma: [
       "Guida preventiva: Visione, Spazio, Tempo",
@@ -42,7 +42,7 @@ const courses = [
     title: "Corso Guida Sicura Ambulanza / Emergenza",
     icon: Ambulance,
     finalita: "Gestione della guida in contesti di emergenza e alta responsabilità, garantendo sicurezza a operatori, paziente e utenti della strada.",
-    durata: "8 ore",
+    durata: "16 ore",
     partecipanti: "Massimo 8 partecipanti",
     programma: [
       "Guida operativa in emergenza",
