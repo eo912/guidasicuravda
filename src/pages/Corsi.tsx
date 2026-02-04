@@ -164,10 +164,10 @@ const Corsi = () => {
                 {/* Moduli Opzionali - displayed right after 2° Livello */}
                 {course.hasModules && (
                   <div className="mt-6 ml-0 lg:ml-22">
-                    <div className="card-professional border-l-4 border-l-primary/30">
+                    <div className="card-professional">
                       <div className="flex flex-col lg:flex-row gap-6">
                         <div className="flex-shrink-0">
-                          <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center border-2 border-primary/20">
+                          <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center">
                             <Plus className="h-8 w-8 text-primary" />
                           </div>
                         </div>
