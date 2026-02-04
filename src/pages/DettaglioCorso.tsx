@@ -22,8 +22,8 @@ const courseData: Record<string, {
     subtitle: "Prevenzione del rischio stradale e in itinere",
     finalita: "Prevenzione del rischio stradale e in itinere attraverso l'acquisizione delle tecniche fondamentali di guida sicura. Il corso fornisce le basi per una guida consapevole e orientata alla sicurezza, riducendo i comportamenti a rischio negli spostamenti quotidiani.",
     durata: {
-      totale: "6–8 ore",
-      suddivisione: "1,5 ore di teoria, 4,5–6,5 ore di pratica guidata",
+      totale: "8 ore",
+      suddivisione: "Percorso integrato con attività in aula e sessioni pratiche guidate",
       partecipanti: "Massimo 8 partecipanti per sessione",
     },
     contenuti: [
