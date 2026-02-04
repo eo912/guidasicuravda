@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Car, Shield, Ambulance } from "lucide-react";
+import { ArrowRight, Car, Shield, Ambulance, Plus } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const courses = [
@@ -100,146 +100,152 @@ const Corsi = () => {
       <section className="section-padding bg-background">
         <div className="section-container">
           <div className="grid gap-8">
-            {courses.map((course) => (
-              <div key={course.id} className="card-professional">
-                <div className="flex flex-col lg:flex-row gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center">
-                      <course.icon className="h-8 w-8 text-primary" />
+            {courses.map((course, courseIndex) => (
+              <div key={course.id}>
+                <div className="card-professional">
+                  <div className="flex flex-col lg:flex-row gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center">
+                        <course.icon className="h-8 w-8 text-primary" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1">
-                      {course.title}
-                    </h2>
-                    {course.subtitle && (
-                      <p className="text-sm text-accent font-medium mb-3">
-                        {course.subtitle}
+                    <div className="flex-1">
+                      <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1">
+                        {course.title}
+                      </h2>
+                      {course.subtitle && (
+                        <p className="text-sm text-accent font-medium mb-3">
+                          {course.subtitle}
+                        </p>
+                      )}
+                      
+                      <div className="mb-4 p-4 bg-secondary/50 rounded-lg">
+                        <p className="text-sm font-semibold text-foreground mb-1">Finalità</p>
+                        <p className="text-sm text-muted-foreground">{course.finalita}</p>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                          <p className="text-sm font-semibold text-foreground mb-1">Durata</p>
+                          <p className="text-sm text-muted-foreground">{course.durata}</p>
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-foreground mb-1">Partecipanti</p>
+                          <p className="text-sm text-muted-foreground">{course.partecipanti}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="mb-4">
+                        <p className="text-sm font-semibold text-foreground mb-2">Programma sintetico</p>
+                        <ul className="space-y-1">
+                          {course.programma.map((item, index) => (
+                            <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <p className="text-sm text-muted-foreground mb-4 italic">
+                        {course.nota}
                       </p>
-                    )}
-                    
-                    <div className="mb-4 p-4 bg-secondary/50 rounded-lg">
-                      <p className="text-sm font-semibold text-foreground mb-1">Finalità</p>
-                      <p className="text-sm text-muted-foreground">{course.finalita}</p>
+                      
+                      <Button variant="outline" asChild>
+                        <Link to={`/corsi/${course.id}`}>
+                          Programma completo
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
                     </div>
-                    
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                      <div>
-                        <p className="text-sm font-semibold text-foreground mb-1">Durata</p>
-                        <p className="text-sm text-muted-foreground">{course.durata}</p>
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-foreground mb-1">Partecipanti</p>
-                        <p className="text-sm text-muted-foreground">{course.partecipanti}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <p className="text-sm font-semibold text-foreground mb-2">Programma sintetico</p>
-                      <ul className="space-y-1">
-                        {course.programma.map((item, index) => (
-                          <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <p className="text-sm text-muted-foreground mb-4 italic">
-                      {course.nota}
-                    </p>
-                    
-                    <Button variant="outline" asChild>
-                      <Link to={`/corsi/${course.id}`}>
-                        Programma completo
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
                   </div>
                 </div>
+
+                {/* Moduli Opzionali - displayed right after 2° Livello */}
+                {course.hasModules && (
+                  <div className="mt-6 ml-0 lg:ml-22">
+                    <div className="card-professional border-l-4 border-l-primary/30">
+                      <div className="flex flex-col lg:flex-row gap-6">
+                        <div className="flex-shrink-0">
+                          <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center border-2 border-primary/20">
+                            <Plus className="h-8 w-8 text-primary" />
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-xl font-bold text-foreground mb-2">
+                            Moduli opzionali
+                          </h3>
+                          <p className="text-sm text-muted-foreground mb-2">
+                            I moduli consentono di adattare il corso alle specifiche condizioni operative e ai profili dei conducenti.
+                          </p>
+                          <p className="text-sm text-foreground font-medium mb-6">
+                            I moduli vengono definiti a seguito di colloquio conoscitivo con l'azienda.
+                          </p>
+                          
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                              <h4 className="text-sm font-semibold text-foreground mb-2">
+                                Moduli di contesto
+                              </h4>
+                              <ul className="space-y-1">
+                                {moduliOpzionali.contesto.map((modulo, index) => (
+                                  <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                                    {modulo}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            <div>
+                              <h4 className="text-sm font-semibold text-foreground mb-2">
+                                Moduli di profilo
+                              </h4>
+                              <ul className="space-y-1">
+                                {moduliOpzionali.profilo.map((modulo, index) => (
+                                  <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                                    {modulo}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            <div>
+                              <h4 className="text-sm font-semibold text-foreground mb-2">
+                                Moduli di veicolo / tecnologia
+                              </h4>
+                              <ul className="space-y-1">
+                                {moduliOpzionali.veicolo.map((modulo, index) => (
+                                  <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                                    {modulo}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            <div>
+                              <h4 className="text-sm font-semibold text-foreground mb-2">
+                                Moduli di contesto operativo
+                              </h4>
+                              <ul className="space-y-1">
+                                {moduliOpzionali.operativo.map((modulo, index) => (
+                                  <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
+                                    <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
+                                    {modulo}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
-          </div>
-
-          {/* Moduli Opzionali Section */}
-          <div className="mt-16">
-            <div className="card-professional">
-              <h2 className="text-2xl font-bold text-foreground mb-4">
-                Moduli opzionali
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                I moduli opzionali sono attivabili solo su richiesta e non sono obbligatori. 
-                Permettono di personalizzare il percorso formativo in base al contesto aziendale, 
-                al profilo dei partecipanti e alle specifiche esigenze operative.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Moduli di contesto */}
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">
-                    Moduli di contesto
-                  </h3>
-                  <ul className="space-y-2">
-                    {moduliOpzionali.contesto.map((modulo, index) => (
-                      <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                        {modulo}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Moduli di profilo */}
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">
-                    Moduli di profilo
-                  </h3>
-                  <ul className="space-y-2">
-                    {moduliOpzionali.profilo.map((modulo, index) => (
-                      <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                        {modulo}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Moduli di veicolo / tecnologia */}
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">
-                    Moduli di veicolo / tecnologia
-                  </h3>
-                  <ul className="space-y-2">
-                    {moduliOpzionali.veicolo.map((modulo, index) => (
-                      <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                        {modulo}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Moduli di contesto operativo */}
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">
-                    Moduli di contesto operativo
-                  </h3>
-                  <ul className="space-y-2">
-                    {moduliOpzionali.operativo.map((modulo, index) => (
-                      <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                        {modulo}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <p className="text-sm text-muted-foreground mt-6 italic">
-                I moduli vengono definiti a seguito di colloquio conoscitivo con l'azienda.
-              </p>
-            </div>
           </div>
 
           {/* Nota personalizzazione */}
@@ -252,20 +258,6 @@ const Corsi = () => {
               definite a seguito di colloquio conoscitivo.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-12 bg-muted">
-        <div className="section-container text-center">
-          <p className="text-muted-foreground mb-4">
-            Vuoi maggiori informazioni sui nostri corsi?
-          </p>
-          <Button variant="default" size="lg" asChild>
-            <Link to="/contatti">
-              Contattaci
-            </Link>
-          </Button>
         </div>
       </section>
     </Layout>
