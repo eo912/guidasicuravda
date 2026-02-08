@@ -82,10 +82,13 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-10 pt-6 space-y-2">
           <p className="text-center text-sm text-primary-foreground/50">
-            © 2026 Guida Sicura VDA – Progetto ideato e sviluppato da Orlarei Edy.
+            © 2026 Guida Sicura VDA
           </p>
           <p className="text-center text-xs text-primary-foreground/40">
-            Attività in fase di avvio. I servizi formativi sono erogati da istruttori qualificati in collaborazione.
+            Progetto ideato e sviluppato da Edy Orlarei e Patrik Petigat (Drive Experience P.E.P.).
+          </p>
+          <p className="text-center text-xs text-primary-foreground/40">
+            L'erogazione dei corsi avviene tramite istruttori qualificati e partner operativi, secondo accordi di collaborazione.
           </p>
         </div>
       </div>
