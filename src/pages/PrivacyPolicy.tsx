@@ -24,13 +24,19 @@ const PrivacyPolicy = () => {
                   1. Titolare del trattamento
                 </h2>
                 <p className="text-muted-foreground">
-                  Il Titolare del trattamento dei dati personali è Guida Sicura VDA, 
-                  progetto ideato e sviluppato da Orlarei Edy, attualmente in fase di avvio. 
-                  Per qualsiasi richiesta è possibile contattare il titolare all'indirizzo: 
-                  <a href="mailto:eo84.EO@gmail.com" className="text-primary hover:underline ml-1">
-                    eo84.EO@gmail.com
-                  </a>
-                </p>
+                   Il Titolare del trattamento dei dati personali è Guida Sicura VDA, 
+                   progetto ideato e sviluppato da Edy Orlarei e Patrik Petigat (Drive Experience P.E.P.). 
+                   L'erogazione dei corsi avviene tramite istruttori qualificati e partner operativi, 
+                   secondo accordi di collaborazione. Il progetto è attualmente in fase di avvio. 
+                   Per qualsiasi richiesta è possibile contattare il titolare all'indirizzo: 
+                   <a href="mailto:eo84.EO@gmail.com" className="text-primary hover:underline ml-1">
+                     eo84.EO@gmail.com
+                   </a>
+                 </p>
+                 <p className="text-muted-foreground text-sm mt-3">
+                   Per informazioni: <a href="mailto:eo84.EO@gmail.com" className="text-primary hover:underline">eo84.EO@gmail.com</a>. 
+                   La gestione delle richieste può coinvolgere i referenti del progetto.
+                 </p>
               </div>
 
               <div>
@@ -181,11 +187,17 @@ const PrivacyPolicy = () => {
                   ultimo aggiornamento.
                 </p>
                 <p className="text-muted-foreground mt-4 text-sm">
-                  Ultimo aggiornamento: Gennaio 2025
-                </p>
-              </div>
+                   Ultimo aggiornamento: Gennaio 2026
+                 </p>
+               </div>
 
-            </div>
+               <div className="mt-6 pt-4 border-t border-border">
+                 <p className="text-muted-foreground text-xs">
+                   Sito web e contenuti editoriali: gestione e aggiornamenti a cura di Edy Orlarei.
+                 </p>
+               </div>
+
+             </div>
           </div>
         </div>
       </section>

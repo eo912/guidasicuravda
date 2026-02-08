@@ -152,8 +152,8 @@ const CookiePolicy = () => {
 
               <div>
                 <p className="text-muted-foreground text-sm">
-                  Ultimo aggiornamento: Gennaio 2025
-                </p>
+                   Ultimo aggiornamento: Gennaio 2026
+                 </p>
               </div>
 
             </div>

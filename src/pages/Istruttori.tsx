@@ -62,15 +62,18 @@ const Istruttori = () => {
                       <p>Collabora alla formazione di operatori e conducenti professionali con un approccio pratico e orientato alla sicurezza.</p>
                     </div>
                     
-                    {/* Personal Project Logo */}
-                    <div className="mt-4 pt-4 border-t border-border">
-                      <p className="text-xs text-muted-foreground mb-2">Progetto personale</p>
-                      <img 
-                        src={logoDrivexperience} 
-                        alt="DriveXperience" 
-                        className="h-16 w-auto object-contain"
-                      />
-                    </div>
+                     {/* Personal Project Logo */}
+                     <div className="mt-4 pt-4 border-t border-border">
+                       <p className="text-xs text-muted-foreground mb-2">Progetto personale</p>
+                       <div className="flex items-center gap-3">
+                         <img 
+                           src={logoDrivexperience} 
+                           alt="Drive Experience P.E.P." 
+                           className="h-16 w-auto object-contain"
+                         />
+                         <span className="text-sm font-medium text-foreground">Drive Experience P.E.P.</span>
+                       </div>
+                     </div>
                   </div>
                 </div>
               </div>
