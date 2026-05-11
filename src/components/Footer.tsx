@@ -72,10 +72,10 @@ const Footer = () => {
               Per informazioni sui corsi e sulle modalità di erogazione:
             </p>
             <a 
-              href="mailto:eo84.EO@gmail.com" 
+              href="mailto:info@guidasicuravda.it" 
               className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors"
             >
-              eo84.EO@gmail.com
+              info@guidasicuravda.it
             </a>
           </div>
         </div>

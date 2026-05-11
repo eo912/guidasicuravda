@@ -144,8 +144,8 @@ const CookiePolicy = () => {
                 </h2>
                 <p className="text-muted-foreground">
                   Per domande relative a questa Cookie Policy, puoi contattarci all'indirizzo: 
-                  <a href="mailto:eo84.EO@gmail.com" className="text-primary hover:underline ml-1">
-                    eo84.EO@gmail.com
+                  <a href="mailto:info@guidasicuravda.it" className="text-primary hover:underline ml-1">
+                    info@guidasicuravda.it
                   </a>
                 </p>
               </div>
