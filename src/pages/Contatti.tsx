@@ -84,10 +84,7 @@ const Contatti = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                     <p className="text-muted-foreground text-sm mb-1">
-                       Per informazioni sui corsi e sulle modalità di erogazione:
-                     </p>
-                     <p className="text-muted-foreground text-xs mt-2">
+                     <p className="text-muted-foreground text-sm mb-2">
                        Per informazioni sui percorsi formativi e sulle modalità di erogazione:
                      </p>
                     <a 
