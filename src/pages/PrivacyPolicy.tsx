@@ -27,8 +27,8 @@ const PrivacyPolicy = () => {
                     Il Titolare del trattamento dei dati personali è Edy Orlarei. 
                     Per qualsiasi richiesta relativa al trattamento dei dati è possibile 
                     contattare il titolare all'indirizzo: 
-                    <a href="mailto:eo84.EO@gmail.com" className="text-primary hover:underline ml-1">
-                      eo84.EO@gmail.com
+                    <a href="mailto:info@guidasicuravda.it" className="text-primary hover:underline ml-1">
+                      info@guidasicuravda.it
                     </a>
                   </p>
               </div>
@@ -161,8 +161,8 @@ const PrivacyPolicy = () => {
                 </ul>
                 <p className="text-muted-foreground mt-4">
                   Per esercitare questi diritti, puoi contattarci all'indirizzo: 
-                  <a href="mailto:eo84.EO@gmail.com" className="text-primary hover:underline ml-1">
-                    eo84.EO@gmail.com
+                  <a href="mailto:info@guidasicuravda.it" className="text-primary hover:underline ml-1">
+                    info@guidasicuravda.it
                   </a>
                 </p>
                 <p className="text-muted-foreground mt-4">
