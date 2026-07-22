@@ -9,6 +9,8 @@ import { Mail, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/Layout";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xpqvjjdl";
+
 const Contatti = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -29,24 +31,49 @@ const Contatti = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Messaggio inviato",
-      description: "Grazie per averci contattato. Risponderemo al più presto.",
-    });
-    
-    setFormData({
-      nome: "",
-      email: "",
-      telefono: "",
-      azienda: "",
-      messaggio: "",
-    });
-    setPrivacyConsent(false);
-    setIsSubmitting(false);
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          nome: formData.nome,
+          email: formData.email,
+          telefono: formData.telefono,
+          azienda: formData.azienda,
+          messaggio: formData.messaggio,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Invio non riuscito");
+      }
+
+      toast({
+        title: "Messaggio inviato",
+        description: "Grazie per averci contattato. Risponderemo al più presto.",
+      });
+
+      setFormData({
+        nome: "",
+        email: "",
+        telefono: "",
+        azienda: "",
+        messaggio: "",
+      });
+      setPrivacyConsent(false);
+    } catch (error) {
+      toast({
+        title: "Invio non riuscito",
+        description: "Si è verificato un errore. Scrivici direttamente a info@guidasicuravda.it.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
