@@ -47,10 +47,14 @@ const courseData: Record<string, {
       "Aziende che avviano un percorso formativo sulla sicurezza stradale",
     ],
     nota: "Corso introduttivo, ideale come primo intervento formativo in azienda. Può essere propedeutico al corso avanzato.",
+    livelloSuccessivo: {
+      id: "guida-sicura-secondo-livello",
+      label: "Guida Sicura – 2° Livello",
+    },
   },
   "guida-sicura-secondo-livello": {
     title: "Guida Sicura – 2° Livello",
-    subtitle: "Formazione avanzata modulare per contesti professionali",
+    subtitle: "Formazione avanzata modulare per professionisti e flotte aziendali",
     finalita: "Sviluppare competenze avanzate di guida sicura, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti. Questo corso rappresenta il livello più alto del catalogo standard ed è la base di partenza per eventuali personalizzazioni tramite percorsi dedicati.",
     durata: {
       totale: "16 ore",
