@@ -16,11 +16,12 @@ const courseData: Record<string, {
   attivita: string[];
   destinatari: string[];
   nota: string;
+  livelloSuccessivo?: { id: string; label: string };
 }> = {
   "guida-sicura-base": {
     title: "Corso di Guida Sicura Base",
     subtitle: "Prevenzione del rischio stradale e in itinere",
-    finalita: "Prevenzione del rischio stradale e in itinere attraverso l'acquisizione delle tecniche fondamentali di guida sicura. Il corso fornisce le basi per una guida consapevole e orientata alla sicurezza, riducendo i comportamenti a rischio negli spostamenti quotidiani.",
+    finalita: "Prevenzione del rischio stradale e in itinere attraverso l'acquisizione delle tecniche fondamentali di guida sicura. Il corso costituisce il primo intervento sulla sicurezza stradale dei lavoratori e fornisce le basi per una guida consapevole e orientata alla sicurezza, riducendo i comportamenti a rischio negli spostamenti quotidiani.",
     durata: {
       totale: "8 ore",
       suddivisione: "Percorso integrato con attività in aula e sessioni pratiche guidate",
