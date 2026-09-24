@@ -1,12 +1,12 @@
 # Roadmap
 
-## Intervento coerenza contenuti (in corso)
-- [ ] Home: H1 = messaggio chiave, brand visibile; sezione "A chi ci rivolgiamo" più completa ed equilibrata; strip secondaria privati/eventi in fondo con CTA discreta
-- [ ] Area operativa (Contatti): Valle d'Aosta + disponibilità fuori regione, no sede, no "tutto il territorio nazionale"
-- [ ] Offerta: famiglie Guida Sicura / Guida Professionale / Guida in Emergenza; moduli extra sotto "Percorsi personalizzati"; formula prudente per veicoli speciali; rimuovere moduli non strutturati
-- [ ] Istruttori: entrambi associati AssoFormatori; uniformare "Edy Orlarei"; terminologia AssoFormatori uniforme
-- [ ] Form contatti: nuovi campi (tipo esigenza, n. partecipanti, località), telefono facoltativo, semplice e mobile-friendly
-- [ ] Verifica coerenza finale tra Home, Corsi, Metodo, Istruttori, Contatti, Footer
+## Intervento coerenza contenuti — COMPLETATO
+- [x] Home: H1 = messaggio chiave, brand visibile; sezione "A chi ci rivolgiamo" completata; strip "Anche per privati" con CTA discreta
+- [x] Area operativa (Contatti): Valle d'Aosta + disponibilità fuori regione, senza sede né "tutto il territorio nazionale"
+- [x] Offerta: etichette famiglia (Guida Sicura / Guida Professionale / Guida in Emergenza); "Percorsi personalizzati" con esempi NCC/executive, enti, flotte; formula prudente per veicoli speciali; rimossi moduli non strutturati
+- [x] Istruttori: entrambi associati AssoFormatori; nome uniformato "Edy Orlarei"; dicitura AssoFormatori uniforme
+- [x] Form contatti: tipo esigenza (5 opzioni), n. partecipanti, località; telefono facoltativo
+- [x] Verifica coerenza: typecheck pulito, anteprima verificata su Home, Corsi, Contatti, Istruttori
 
-## Vincoli
-- Non toccare: cookie banner, analytics, SEO tecnico, sitemap, canonical, meta tag, logo, palette, foto, prezzi
+## Da affrontare separatamente (esclusi per vincolo)
+- Consenso cookie/GTM, script head, SEO per pagina, sitemap schede corso, aria-label menu mobile, pagina 404
