@@ -1,39 +1,55 @@
-# Audit Guida Sicura VDA (nessun file modificato)
+# Intervento tecnico SEO, sitemap, 404 e accessibilità
 
-## Criticità ALTE
+## Obiettivo
+Correggere in un unico intervento conservativo le criticità tecniche indicate, senza modificare contenuti approvati, grafica, corsi, cookie, analytics o privacy.
 
-1. **Cookie e consenso (index.html, CookieBanner)**: Google Tag Manager si carica a ogni visita, prima che l'utente scelga. I pulsanti "Accetta" e "Rifiuta" salvano solo la scelta e non bloccano né attivano GA4/Clarity. È in contraddizione con la Cookie Policy (Clarity descritto come opt-in) e con il GDPR.
-2. **Script esterno sconosciuto in head (index.html)**: prima di GTM c'è uno script `api.lovable.dev/...` che non è documentato nella Cookie Policy. Va verificato o rimosso.
-3. **SEO per pagina assente**: tutte le pagine condividono lo stesso title e la stessa meta description della home. Anche il canonical punta sempre alla home, quindi Corsi, Metodo, Istruttori e le schede corso rischiano di non essere indicizzate come pagine distinte.
-4. **Sitemap incompleta (public/sitemap.xml)**: mancano le 3 schede corso `/corsi/...`, che sono le pagine con più contenuto.
+## Modifiche previste
 
-## Criticità MEDIE
+### 1. Metadati specifici per pagina
+- Introdurre un piccolo componente SEO centralizzato, senza dipendenze aggiuntive, che aggiorni `title`, description, canonical, Open Graph e Twitter al cambio di pagina.
+- Rimuovere da `index.html` il canonical globale, che oggi attribuisce tutte le pagine alla Home.
+- Mantenere in `index.html` metadati social sobri della Home come fallback per i servizi che non eseguono JavaScript.
+- Usare URL canonical auto-riferiti sul dominio `https://guidasicuravda.it`.
+- Coprire:
+  - `/`
+  - `/corsi`
+  - `/corsi/guida-sicura-base`
+  - `/corsi/guida-sicura-secondo-livello`
+  - `/corsi/guida-emergenza-ambulanze`
+  - `/metodo`
+  - `/istruttori`
+  - `/contatti`
+  - `/privacy-policy`
+  - `/cookie-policy`
+  - route inesistenti con `noindex, nofollow`
 
-5. **H1 della home poco utile**: l'H1 è solo "GUIDA SICURA VDA". Il messaggio chiave, "Formazione pratica alla guida sicura per aziende", è un paragrafo e non un titolo.
-6. **Istruttori, testo introduttivo contraddittorio (Istruttori.tsx, riga 32)**: dice "uno degli istruttori è associato ad Assoformatori", ma entrambe le schede riportano "Associato Assoformatori".
-7. **Area operativa (Contatti)**: "tutto il territorio nazionale" contrasta con l'identità "VDA" (Valle d'Aosta) e con l'immagine alpina. Serve chiarire se l'ambito è regionale o nazionale.
-8. **Target privati**: il sito è interamente B2B e non dice mai se i privati possono iscriversi. Se i privati sono esclusi, conviene dirlo esplicitamente.
-9. **Termine "preventivo" (Contatti, righe 102 e 146)**: è coerente con la scelta di non mostrare prezzi. Però il form non chiede il numero di partecipanti né il corso di interesse, dati che servirebbero proprio per un preventivo.
-10. **Home, sezione "A chi ci rivolgiamo"**: il riquadro a destra contiene solo un pulsante. Resta un grande spazio vuoto, soprattutto su desktop, ed è un residuo della vecchia sezione "cataloghi formativi".
-11. **Home, logo Assoformatori**: compare con l'intestazione "Riferimenti formativi", mentre la pagina Metodo usa "Sistema formativo di riferimento" e aggiunge CTS e RINA. La terminologia non è uniforme.
-12. **Moduli opzionali (Corsi)**: "Trasporto merci sensibili" e altre voci non trovano riscontro nelle schede dettaglio. Alcuni servizi sono promessi ma non descritti.
+### 2. Open Graph e immagine social
+- Sostituire la vecchia immagine di anteprima esterna con una versione social 1200×630 ricavata dall’immagine alpina già usata nella Home.
+- Impostare `og:title`, `og:description`, `og:url`, `og:image` e i corrispondenti campi Twitter.
+- Usare la stessa immagine coerente già presente nel sito; non generarne una nuova e non alterare le fotografie mostrate nelle pagine.
 
-## Criticità BASSE
+### 3. Sitemap e robots
+- Aggiornare il generatore esistente, senza sostituirne il meccanismo.
+- Inserire tutte le route pubbliche e indicizzabili, comprese le tre schede corso e le pagine legali.
+- Eliminare i `lastmod` calcolati automaticamente alla data di compilazione, perché non rappresentano modifiche specifiche delle singole pagine.
+- Rigenerare `public/sitemap.xml` e verificare assenza di duplicati, route dinamiche generiche e URL non pubbliche.
+- Conservare `robots.txt` e verificare che punti a `https://guidasicuravda.it/sitemap.xml`.
 
-13. **Header su mobile**: sotto i 640px si vede solo il quadrato "GS", senza il nome del sito.
-14. **Pulsante menu mobile**: manca un'etichetta di accessibilità (aria-label).
-15. **Footer**: non c'è il link "Home" nella navigazione, e i titoli di colonna sono H4 senza un H2/H3 prima.
-16. **Pagina 404 (NotFound.tsx)**: è la versione di default, in inglese e senza header e footer del sito.
-17. **Messaggio di errore del form**: rimanda a info@guidasicuravda.it. È corretto, ma va verificato che la casella sia davvero attiva.
-18. **Nomi invertiti**: "Orlarei Edy" nelle schede istruttori, "Edy Orlarei" nel footer e nella Privacy. Conviene uniformare.
-19. **Immagine social (og:image)**: è uno screenshot di anteprima vecchio, probabilmente precedente all'hero alpino.
-20. **Cookie banner su mobile**: fisso in basso, può coprire i pulsanti dei form finché l'utente non sceglie.
+### 4. Pagina 404
+- Sostituire la pagina inglese predefinita con una pagina italiana dentro il layout esistente.
+- Aggiungere testo essenziale e due azioni: ritorno alla Home e accesso ai Corsi.
+- Riutilizzare esclusivamente componenti, colori e stile già presenti.
 
-## Aspetti coerenti (nessuna azione)
-- 8 partecipanti ovunque; durate 8/16/16 ore uguali tra Corsi e schede dettaglio.
-- Nessun prezzo, nessun telefono aziendale, nessun riferimento sportivo (solo negazioni esplicite nel Metodo).
-- Email unica info@guidasicuravda.it in footer, contatti e policy.
-- Titolare Privacy: solo Edy Orlarei, come richiesto.
+### 5. Accessibilità mobile
+- Aggiungere al pulsante del menu mobile un’etichetta dinamica “Apri menu di navigazione” / “Chiudi menu di navigazione”, insieme allo stato `aria-expanded` e al collegamento al menu controllato.
+- Non modificare disposizione o stile del menu.
 
-## Passo successivo proposto
-Se approvi, posso correggere nell'ordine: 1-4 (alte), poi 5-12, poi 13-20. In alternativa indicami solo i punti da sistemare.
+## Verifica finale
+- Eseguire typecheck e build del progetto.
+- Controllare nel browser desktop e mobile: navigazione, menu, 404, title, description, canonical e metadati social per ogni route coperta.
+- Validare sitemap XML, URL univoche e collegamento in robots.txt.
+- Verificare che cookie banner, GTM, analytics, privacy, testi commerciali, corsi, form, partner, istruttori e identità visiva siano rimasti invariati.
+- Nel riepilogo finale indicare file modificati, route coperte e costo in crediti disponibile per questa lavorazione.
+
+## Nota tecnica
+Questa applicazione aggiorna i metadati per pagina nel browser. I motori di ricerca che eseguono JavaScript vedranno i dati specifici; i social crawler che non lo eseguono vedranno il fallback della Home presente nel documento iniziale.
