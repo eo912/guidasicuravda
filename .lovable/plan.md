@@ -1,55 +1,35 @@
-# Intervento tecnico SEO, sitemap, 404 e accessibilità
+# Audit tecnico cookie, consenso e privacy – Guida Sicura VDA
 
-## Obiettivo
-Correggere in un unico intervento conservativo le criticità tecniche indicate, senza modificare contenuti approvati, grafica, corsi, cookie, analytics o privacy.
+Solo analisi: nessun file è stato modificato. Verifica fatta nel codice e con una visita reale al sito (browser mobile, nessun consenso dato).
 
-## Modifiche previste
+## Cosa si carica prima del consenso (rilevato)
+```text
+googletagmanager.com/gtm.js?id=GTM-M4LWRNTD      Google Tag Manager
+googletagmanager.com/gtag/js?id=G-YMZ1JRKWLG     GA4
+scripts.clarity.ms + clarity.ms/tag/va1u0sab64   Microsoft Clarity (invia già dati: j.clarity.ms/collect)
+connect.facebook.net/en_US/fbevents.js           Meta (Facebook) Pixel  <-- non documentato
+api.lovable.dev/...                              script esterno non documentato
+Cookie scritti subito: _ga, _ga_YMZ1JRKWLG
+```
 
-### 1. Metadati specifici per pagina
-- Introdurre un piccolo componente SEO centralizzato, senza dipendenze aggiuntive, che aggiorni `title`, description, canonical, Open Graph e Twitter al cambio di pagina.
-- Rimuovere da `index.html` il canonical globale, che oggi attribuisce tutte le pagine alla Home.
-- Mantenere in `index.html` metadati social sobri della Home come fallback per i servizi che non eseguono JavaScript.
-- Usare URL canonical auto-riferiti sul dominio `https://guidasicuravda.it`.
-- Coprire:
-  - `/`
-  - `/corsi`
-  - `/corsi/guida-sicura-base`
-  - `/corsi/guida-sicura-secondo-livello`
-  - `/corsi/guida-emergenza-ambulanze`
-  - `/metodo`
-  - `/istruttori`
-  - `/contatti`
-  - `/privacy-policy`
-  - `/cookie-policy`
-  - route inesistenti con `noindex, nofollow`
+## Esito per punto
 
-### 2. Open Graph e immagine social
-- Sostituire la vecchia immagine di anteprima esterna con una versione social 1200×630 ricavata dall’immagine alpina già usata nella Home.
-- Impostare `og:title`, `og:description`, `og:url`, `og:image` e i corrispondenti campi Twitter.
-- Usare la stessa immagine coerente già presente nel sito; non generarne una nuova e non alterare le fotografie mostrate nelle pagine.
+1. **Tracker prima del consenso** – `index.html` + contenitore GTM. GTM, GA4, Clarity e Meta Pixel partono al caricamento. **Alta.** Correzione: caricare GTM solo dopo "Accetta", oppure attivare Consent Mode v2 con default "denied" e trigger condizionati nel contenitore.
+2. **GTM / GA4 / Clarity / altri** – GA4 e Clarity sono configurati dentro GTM (non nel codice). In GTM è presente anche il **Meta Pixel**, un tracker di marketing vietato dalle regole del progetto. **Alta.** Correzione: rimuovere il tag Meta dal contenitore GTM e pubblicare nuova versione.
+3. **Il banner blocca davvero?** – `src/components/CookieBanner.tsx`. No: salva solo `gsvda_cookie_consent` in localStorage, non comunica nulla a GTM. **Alta.** Correzione: al click inviare la scelta a GTM (`gtag('consent','update',…)` + evento dataLayer).
+4. **Accetta vs Rifiuta** – stesso effetto tecnico; dopo "Rifiuta" `_ga` resta presente e i tracker restano attivi. Anche la "X" su mobile vale Rifiuta (corretto). **Alta.** Correzione: collegata al punto 3.
+5. **Consent Mode v2** – assente: nessun `gtag('consent','default',…)` né parametri `ad_user_data`/`ad_personalization`. **Alta.** Correzione: blocco di default "denied" in `index.html` prima dello snippet GTM, update al consenso.
+6. **Coerenza con le policy** – `CookiePolicy.tsx`/`PrivacyPolicy.tsx` dichiarano GA4 e Clarity "solo previo consenso" e "nessun cookie di marketing né condivisione con piattaforme pubblicitarie": falso finché sono attivi caricamento anticipato e Meta Pixel. Il cookie tecnico è in realtà un valore localStorage senza scadenza (dichiarati 12 mesi). Contatto policy `info@guidasicuravda.it` coerente con il sito. **Alta.** Correzione: sistemare il comportamento (non il testo); poi precisare "localStorage" e implementare scadenza 12 mesi.
+7. **Script non documentati** – script `api.lovable.dev/…` in testa a `index.html` (inserito dalla piattaforma, non citato in policy) e Meta Pixel. **Media** (Lovable) / **Alta** (Meta). Correzione: rimuovere Meta; verificare la natura dello script Lovable e, se non necessario, eliminarlo o documentarlo.
+8. **Revoca/modifica consenso** – nessun modo: il banner non ricompare e la policy rimanda a "cancellare i cookie del browser" (che non cancella localStorage in modo evidente). **Media.** Correzione: link "Gestisci preferenze cookie" nel footer che riapre il banner.
+9. **Mobile / UX** – banner fisso in basso, pulsanti Rifiuta/Accetta di pari peso (corretto), ma su mobile copre parte di pagina; il testo non nomina Clarity/GA4. Nessun pulsante "Personalizza". **Bassa.** Correzione: citare gli strumenti nel testo; eventuale padding inferiore alla pagina mentre il banner è visibile.
+10. **Caricamenti ridondanti** – GTM caricato una sola volta; nessun doppio GA4 nel codice. Da verificare in GTM che GA4 non sia configurato due volte (tag Google + tag GA4). **Bassa.** Correzione: controllo contenitore.
 
-### 3. Sitemap e robots
-- Aggiornare il generatore esistente, senza sostituirne il meccanismo.
-- Inserire tutte le route pubbliche e indicizzabili, comprese le tre schede corso e le pagine legali.
-- Eliminare i `lastmod` calcolati automaticamente alla data di compilazione, perché non rappresentano modifiche specifiche delle singole pagine.
-- Rigenerare `public/sitemap.xml` e verificare assenza di duplicati, route dinamiche generiche e URL non pubbliche.
-- Conservare `robots.txt` e verificare che punti a `https://guidasicuravda.it/sitemap.xml`.
+## Correzione minimale proposta (quando vorrai)
+1. In GTM: eliminare il tag Meta Pixel; impostare GA4 e Clarity con requisito di consenso `analytics_storage`.
+2. `index.html`: Consent Mode v2 default "denied" prima di GTM.
+3. `CookieBanner.tsx`: su Accetta/Rifiuta inviare `consent update` a GTM; ad avvio leggere la scelta salvata e riapplicarla; scadenza 12 mesi.
+4. `Footer.tsx`: link "Gestisci preferenze cookie".
+5. Policy: aggiornare solo dicitura localStorage/revoca.
 
-### 4. Pagina 404
-- Sostituire la pagina inglese predefinita con una pagina italiana dentro il layout esistente.
-- Aggiungere testo essenziale e due azioni: ritorno alla Home e accesso ai Corsi.
-- Riutilizzare esclusivamente componenti, colori e stile già presenti.
-
-### 5. Accessibilità mobile
-- Aggiungere al pulsante del menu mobile un’etichetta dinamica “Apri menu di navigazione” / “Chiudi menu di navigazione”, insieme allo stato `aria-expanded` e al collegamento al menu controllato.
-- Non modificare disposizione o stile del menu.
-
-## Verifica finale
-- Eseguire typecheck e build del progetto.
-- Controllare nel browser desktop e mobile: navigazione, menu, 404, title, description, canonical e metadati social per ogni route coperta.
-- Validare sitemap XML, URL univoche e collegamento in robots.txt.
-- Verificare che cookie banner, GTM, analytics, privacy, testi commerciali, corsi, form, partner, istruttori e identità visiva siano rimasti invariati.
-- Nel riepilogo finale indicare file modificati, route coperte e costo in crediti disponibile per questa lavorazione.
-
-## Nota tecnica
-Questa applicazione aggiorna i metadati per pagina nel browser. I motori di ricerca che eseguono JavaScript vedranno i dati specifici; i social crawler che non lo eseguono vedranno il fallback della Home presente nel documento iniziale.
+Approvando questo piano non verrà applicato nulla automaticamente senza tua indicazione esplicita di procedere con le correzioni.
