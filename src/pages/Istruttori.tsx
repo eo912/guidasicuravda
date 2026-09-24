@@ -54,7 +54,7 @@ const Istruttori = () => {
                       Patrik Petigat
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                      Istruttore di guida sicura – Associato Assoformatori
+                      Istruttore di guida sicura – Associato AssoFormatori
                     </p>
                     <div className="space-y-2 text-sm text-foreground/80">
                       <p>Istruttore di guida con esperienza nelle autoscuole e nella formazione alla guida sicura e operativa in emergenza.</p>
@@ -93,7 +93,7 @@ const Istruttori = () => {
                       Edy Orlarei
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                      Istruttore di guida sicura – Associato Assoformatori
+                      Istruttore di guida sicura – Associato AssoFormatori
                     </p>
                     <div className="space-y-2 text-sm text-foreground/80">
                       <p>Istruttore di guida sicura con attività legata alla gestione del veicolo in situazioni di emergenza.</p>

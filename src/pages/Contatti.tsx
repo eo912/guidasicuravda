@@ -18,6 +18,9 @@ const Contatti = () => {
     email: "",
     telefono: "",
     azienda: "",
+    tipoEsigenza: "",
+    partecipanti: "",
+    localita: "",
     messaggio: "",
   });
   const [privacyConsent, setPrivacyConsent] = useState(false);
