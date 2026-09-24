@@ -28,8 +28,8 @@ const Istruttori = () => {
             <div className="p-6 bg-secondary rounded-lg mb-12">
               <p className="text-foreground leading-relaxed">
                 I corsi di Guida Sicura VDA sono erogati da istruttori qualificati 
-                che operano come liberi professionisti in collaborazione. Uno degli 
-                istruttori è associato ad Assoformatori.
+                che operano come liberi professionisti in collaborazione. Entrambi 
+                gli istruttori sono associati ad AssoFormatori.
               </p>
             </div>
 
@@ -54,7 +54,7 @@ const Istruttori = () => {
                       Patrik Petigat
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                      Istruttore di guida sicura – Associato Assoformatori
+                      Istruttore di guida sicura – Associato AssoFormatori
                     </p>
                     <div className="space-y-2 text-sm text-foreground/80">
                       <p>Istruttore di guida con esperienza nelle autoscuole e nella formazione alla guida sicura e operativa in emergenza.</p>
@@ -78,22 +78,22 @@ const Istruttori = () => {
                 </div>
               </div>
 
-              {/* Orlarei Edy */}
+              {/* Edy Orlarei */}
               <div className="card-professional">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
                   <div className="flex-shrink-0">
                     <img 
                       src={edyPhoto} 
-                      alt="Orlarei Edy" 
+                      alt="Edy Orlarei" 
                       className="w-28 h-28 object-cover rounded-lg"
                     />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2">
-                      Orlarei Edy
+                      Edy Orlarei
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                      Istruttore di guida sicura – Associato Assoformatori
+                      Istruttore di guida sicura – Associato AssoFormatori
                     </p>
                     <div className="space-y-2 text-sm text-foreground/80">
                       <p>Istruttore di guida sicura con attività legata alla gestione del veicolo in situazioni di emergenza.</p>

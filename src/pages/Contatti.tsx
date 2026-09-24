@@ -18,12 +18,15 @@ const Contatti = () => {
     email: "",
     telefono: "",
     azienda: "",
+    tipoEsigenza: "",
+    partecipanti: "",
+    localita: "",
     messaggio: "",
   });
   const [privacyConsent, setPrivacyConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
@@ -44,6 +47,9 @@ const Contatti = () => {
           email: formData.email,
           telefono: formData.telefono,
           azienda: formData.azienda,
+          tipo_esigenza: formData.tipoEsigenza,
+          numero_partecipanti: formData.partecipanti,
+          localita: formData.localita,
           messaggio: formData.messaggio,
         }),
       });
@@ -62,6 +68,9 @@ const Contatti = () => {
         email: "",
         telefono: "",
         azienda: "",
+        tipoEsigenza: "",
+        partecipanti: "",
+        localita: "",
         messaggio: "",
       });
       setPrivacyConsent(false);
@@ -130,8 +139,9 @@ const Contatti = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Area operativa</h3>
                     <p className="text-muted-foreground">
-                      I corsi vengono erogati su tutto il territorio nazionale, 
-                      presso strutture convenzionate o presso sedi concordate.
+                      Guida Sicura VDA è operativa in Valle d'Aosta. I corsi possono 
+                      essere organizzati anche fuori regione, presso aziende, aree 
+                      formative, piste o strutture idonee concordate con il committente.
                     </p>
                   </div>
                 </div>
@@ -205,6 +215,50 @@ const Contatti = () => {
                         placeholder="Nome ente o organizzazione"
                       />
                     </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="tipoEsigenza">Tipo di esigenza *</Label>
+                      <select
+                        id="tipoEsigenza"
+                        name="tipoEsigenza"
+                        value={formData.tipoEsigenza}
+                        onChange={handleChange}
+                        required
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      >
+                        <option value="" disabled>Seleziona...</option>
+                        <option value="Guida Sicura">Guida Sicura</option>
+                        <option value="Guida Professionale">Guida Professionale</option>
+                        <option value="Guida in Emergenza">Guida in Emergenza</option>
+                        <option value="Percorso personalizzato">Percorso personalizzato</option>
+                        <option value="Evento/giornata privata">Evento/giornata privata</option>
+                      </select>
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="partecipanti">Numero indicativo partecipanti</Label>
+                      <Input
+                        id="partecipanti"
+                        name="partecipanti"
+                        type="number"
+                        min="1"
+                        value={formData.partecipanti}
+                        onChange={handleChange}
+                        placeholder="Es. 8"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="localita">Località desiderata</Label>
+                    <Input
+                      id="localita"
+                      name="localita"
+                      value={formData.localita}
+                      onChange={handleChange}
+                      placeholder="Es. Aosta, presso la nostra sede, pista..."
+                    />
                   </div>
 
                   <div className="space-y-2">

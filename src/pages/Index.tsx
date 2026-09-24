@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Users, Target } from "lucide-react";
 import Layout from "@/components/Layout";
 import heroImage from "@/assets/hero-driving.jpg";
-import logoAssoformatori from "@/assets/logo-assoformatori.jpg";
+import logoAssoFormatori from "@/assets/logo-assoformatori.jpg";
 
 const Index = () => {
   return (
@@ -19,12 +19,12 @@ const Index = () => {
         
         <div className="relative section-container py-20 md:py-32">
           <div className="max-w-2xl animate-slide-up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 text-balance">
-              GUIDA SICURA VDA
-            </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 font-serif">
-              Formazione pratica alla guida sicura per aziende e professionisti
+            <p className="text-accent font-serif font-bold tracking-widest uppercase mb-3">
+              Guida Sicura VDA
             </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 text-balance">
+              Formazione pratica alla guida sicura per aziende e professionisti
+            </h1>
             <p className="text-lg text-primary-foreground/70 mb-8 max-w-xl">
               Corsi strutturati per migliorare la sicurezza alla guida in ambito lavorativo. 
               Formazione destinata a chi guida per lavoro, con un approccio concreto e operativo.
@@ -157,7 +157,24 @@ const Index = () => {
                 </li>
               </ul>
             </div>
-            <div className="bg-card rounded-lg p-8 card-professional flex items-center justify-center">
+            <div className="bg-card rounded-lg p-8 card-professional">
+              <h3 className="text-xl font-bold text-foreground mb-4">
+                Formazione costruita sulle vostre esigenze
+              </h3>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-muted-foreground text-sm">Colloquio conoscitivo per comprendere contesto, veicoli e obiettivi</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-muted-foreground text-sm">Programma definito in base a profili dei conducenti e condizioni operative</p>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-muted-foreground text-sm">Erogazione in Valle d'Aosta o presso la vostra sede e strutture idonee</p>
+                </li>
+              </ul>
               <Button variant="default" size="lg" asChild>
                 <Link to="/contatti">
                   Richiedi informazioni
@@ -173,14 +190,32 @@ const Index = () => {
         <div className="section-container">
           <div className="text-center">
             <p className="text-sm text-muted-foreground mb-6 uppercase tracking-wide">
-              Riferimenti formativi
+              Sistema formativo di riferimento
             </p>
             <img 
-              src={logoAssoformatori} 
-              alt="Assoformatori" 
+              src={logoAssoFormatori} 
+              alt="AssoFormatori" 
               className="h-16 md:h-20 w-auto mx-auto object-contain"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Privati ed eventi */}
+      <section className="py-12 bg-background border-t border-border">
+        <div className="section-container text-center max-w-2xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+            Anche per privati
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Cerchi un'esperienza dedicata ai privati? Organizziamo anche giornate dedicate, 
+            eventi e attività esperienziali in collaborazione con professionisti del settore.
+          </p>
+          <Button variant="outline" asChild>
+            <Link to="/contatti">
+              Contattaci per conoscere le iniziative disponibili
+            </Link>
+          </Button>
         </div>
       </section>
 

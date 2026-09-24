@@ -6,6 +6,7 @@ import Layout from "@/components/Layout";
 const courses = [
   {
     id: "guida-sicura-base",
+    famiglia: "Guida Sicura",
     title: "Corso di Guida Sicura Base",
     icon: Car,
     finalita: "Prevenzione del rischio stradale e in itinere attraverso l'acquisizione delle tecniche fondamentali di guida sicura.",
@@ -21,6 +22,7 @@ const courses = [
   },
   {
     id: "guida-sicura-secondo-livello",
+    famiglia: "Guida Professionale",
     title: "Guida Sicura – 2° Livello",
     subtitle: "Formazione avanzata modulare per contesti professionali",
     icon: Shield,
@@ -34,11 +36,12 @@ const courses = [
       "Gestione intersezioni e punti ciechi",
       "Esercitazioni pratiche su visione, distanza, evitamento ostacoli",
     ],
-    nota: "Livello più alto del catalogo standard. Può essere integrato con moduli opzionali.",
+    nota: "Livello più alto del catalogo standard. Può essere integrato con percorsi personalizzati.",
     hasModules: true,
   },
   {
     id: "guida-emergenza-ambulanze",
+    famiglia: "Guida in Emergenza",
     title: "Corso Guida Sicura Ambulanza / Emergenza",
     icon: Ambulance,
     finalita: "Gestione della guida in contesti di emergenza e alta responsabilità, garantendo sicurezza a operatori, paziente e utenti della strada.",
@@ -74,10 +77,10 @@ const moduliOpzionali = {
     "Veicoli elettrici e ibridi",
   ],
   operativo: [
-    "Trasporto merci sensibili",
-    "Interventi in emergenza",
-    "Gestione flotte aziendali",
-    "Logistica e consegne",
+    "Conducenti NCC ed executive",
+    "Personale di enti e servizi",
+    "Flotte aziendali",
+    "Esigenze operative specifiche",
   ],
 };
 
@@ -110,6 +113,9 @@ const Corsi = () => {
                       </div>
                     </div>
                     <div className="flex-1">
+                      <p className="text-xs font-semibold text-accent uppercase tracking-wide mb-1">
+                        {course.famiglia}
+                      </p>
                       <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1">
                         {course.title}
                       </h2>
@@ -161,7 +167,7 @@ const Corsi = () => {
                   </div>
                 </div>
 
-                {/* Moduli Opzionali - displayed right after 2° Livello */}
+                {/* Percorsi personalizzati - displayed right after 2° Livello */}
                 {course.hasModules && (
                   <div className="mt-6 ml-0 lg:ml-22">
                     <div className="card-professional">
@@ -173,13 +179,13 @@ const Corsi = () => {
                         </div>
                         <div className="flex-1">
                           <h3 className="text-xl font-bold text-foreground mb-2">
-                            Moduli opzionali
+                            Percorsi personalizzati
                           </h3>
                           <p className="text-sm text-muted-foreground mb-2">
-                            I moduli consentono di adattare il corso alle specifiche condizioni operative e ai profili dei conducenti.
+                            I percorsi personalizzati consentono di adattare la formazione alle specifiche condizioni operative e ai profili dei conducenti.
                           </p>
                           <p className="text-sm text-foreground font-medium mb-6">
-                            I moduli vengono definiti a seguito di colloquio conoscitivo con l'azienda.
+                            I percorsi vengono definiti a seguito di colloquio conoscitivo con l'azienda.
                           </p>
                           
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -227,7 +233,7 @@ const Corsi = () => {
 
                             <div>
                               <h4 className="text-sm font-semibold text-foreground mb-2">
-                                Moduli di contesto operativo
+                                Esempi di percorsi
                               </h4>
                               <ul className="space-y-1">
                                 {moduliOpzionali.operativo.map((modulo, index) => (
@@ -239,6 +245,12 @@ const Corsi = () => {
                               </ul>
                             </div>
                           </div>
+
+                          <p className="text-sm text-muted-foreground mt-6 italic">
+                            Percorsi per categorie e veicoli specifici (ad esempio autobus, camion 
+                            o autoarticolati) vengono valutati caso per caso in funzione di mezzi, 
+                            spazi, obiettivi e requisiti operativi.
+                          </p>
                         </div>
                       </div>
                     </div>
