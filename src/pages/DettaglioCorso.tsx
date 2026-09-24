@@ -80,13 +80,14 @@ const courseData: Record<string, {
       "Quadri e dirigenti con uso frequente del veicolo",
       "Personale con elevato chilometraggio annuo",
       "RSPP e responsabili della prevenzione",
+      "Conducenti di flotte aziendali",
       "Fleet Manager e responsabili parco auto",
       "Personale addetto al trasporto persone o merci leggere",
     ],
     nota: "Livello più alto del catalogo standard. Può essere integrato con percorsi personalizzati definiti in base alle esigenze operative specifiche dell'azienda.",
   },
   "guida-emergenza-ambulanze": {
-    title: "Corso Guida Sicura Ambulanza / Emergenza",
+    title: "Corso di guida sicura per ambulanze e mezzi di soccorso",
     subtitle: "Guida in emergenza e tutela del paziente",
     finalita: "Gestione della guida in contesti di emergenza e alta responsabilità, garantendo sicurezza a operatori, paziente e utenti della strada. Il corso bilancia la necessità di rapidità operativa con il controllo del mezzo e la tutela di tutte le persone coinvolte.",
     durata: {
