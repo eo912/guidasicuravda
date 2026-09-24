@@ -130,8 +130,9 @@ const Contatti = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Area operativa</h3>
                     <p className="text-muted-foreground">
-                      I corsi vengono erogati su tutto il territorio nazionale, 
-                      presso strutture convenzionate o presso sedi concordate.
+                      Guida Sicura VDA è operativa in Valle d'Aosta. I corsi possono 
+                      essere organizzati anche fuori regione, presso aziende, aree 
+                      formative, piste o strutture idonee concordate con il committente.
                     </p>
                   </div>
                 </div>

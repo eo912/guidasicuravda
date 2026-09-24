@@ -201,6 +201,24 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Privati ed eventi */}
+      <section className="py-12 bg-background border-t border-border">
+        <div className="section-container text-center max-w-2xl mx-auto">
+          <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+            Anche per privati
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Cerchi un'esperienza dedicata ai privati? Organizziamo anche giornate dedicate, 
+            eventi e attività esperienziali in collaborazione con professionisti del settore.
+          </p>
+          <Button variant="outline" asChild>
+            <Link to="/contatti">
+              Contattaci per conoscere le iniziative disponibili
+            </Link>
+          </Button>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-primary">
         <div className="section-container text-center">

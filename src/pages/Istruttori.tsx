@@ -28,8 +28,8 @@ const Istruttori = () => {
             <div className="p-6 bg-secondary rounded-lg mb-12">
               <p className="text-foreground leading-relaxed">
                 I corsi di Guida Sicura VDA sono erogati da istruttori qualificati 
-                che operano come liberi professionisti in collaborazione. Uno degli 
-                istruttori è associato ad Assoformatori.
+                che operano come liberi professionisti in collaborazione. Entrambi 
+                gli istruttori sono associati ad AssoFormatori.
               </p>
             </div>
 
