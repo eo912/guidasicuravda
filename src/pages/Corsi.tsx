@@ -113,6 +113,9 @@ const Corsi = () => {
                       </div>
                     </div>
                     <div className="flex-1">
+                      <p className="text-xs font-semibold text-accent uppercase tracking-wide mb-1">
+                        {course.famiglia}
+                      </p>
                       <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1">
                         {course.title}
                       </h2>
