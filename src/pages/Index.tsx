@@ -89,8 +89,8 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold text-foreground mb-3">Approccio pratico</h3>
               <p className="text-muted-foreground">
-                Esercitazioni su strada e in aree controllate, con simulazioni 
-                di situazioni critiche in ambiente protetto.
+                Formazione pratica in ambiente controllato, con esercitazioni 
+                su piazzali, piste e aree dedicate.
               </p>
             </div>
           </div>
