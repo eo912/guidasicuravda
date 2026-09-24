@@ -68,6 +68,9 @@ const Contatti = () => {
         email: "",
         telefono: "",
         azienda: "",
+        tipoEsigenza: "",
+        partecipanti: "",
+        localita: "",
         messaggio: "",
       });
       setPrivacyConsent(false);
