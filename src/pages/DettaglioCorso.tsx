@@ -53,7 +53,7 @@ const courseData: Record<string, {
     finalita: "Sviluppare competenze avanzate di guida sicura, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti. Questo corso rappresenta il livello più alto del catalogo standard ed è la base di partenza per eventuali personalizzazioni tramite percorsi dedicati.",
     durata: {
       totale: "16 ore",
-      suddivisione: "Percorso integrato con attività in aula e sessioni pratiche su piazzale e percorsi simulati",
+      suddivisione: "Percorso integrato con attività in aula ed esercitazioni pratiche su piazzali, piste e aree idonee",
       partecipanti: "Massimo 8 partecipanti per sessione",
     },
     contenuti: [
