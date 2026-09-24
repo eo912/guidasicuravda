@@ -49,8 +49,8 @@ const Metodo = () => {
                     Ogni corso prevede una combinazione di teoria e pratica, 
                     con esercitazioni che partono da situazioni semplici per 
                     arrivare gradualmente a scenari più complessi. I partecipanti 
-                    affrontano manovre in ambiente controllato prima di applicare 
-                    le tecniche apprese in contesti realistici.
+                    svolgono la formazione pratica in ambiente controllato, con 
+                    esercitazioni su piazzali, piste e aree dedicate.
                   </p>
                 </div>
               </div>
