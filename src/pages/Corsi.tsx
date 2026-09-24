@@ -6,6 +6,7 @@ import Layout from "@/components/Layout";
 const courses = [
   {
     id: "guida-sicura-base",
+    famiglia: "Guida Sicura",
     title: "Corso di Guida Sicura Base",
     icon: Car,
     finalita: "Prevenzione del rischio stradale e in itinere attraverso l'acquisizione delle tecniche fondamentali di guida sicura.",
@@ -227,7 +228,7 @@ const Corsi = () => {
 
                             <div>
                               <h4 className="text-sm font-semibold text-foreground mb-2">
-                                Moduli di contesto operativo
+                                Esempi di percorsi
                               </h4>
                               <ul className="space-y-1">
                                 {moduliOpzionali.operativo.map((modulo, index) => (
@@ -239,6 +240,12 @@ const Corsi = () => {
                               </ul>
                             </div>
                           </div>
+
+                          <p className="text-sm text-muted-foreground mt-6 italic">
+                            Percorsi per categorie e veicoli specifici (ad esempio autobus, camion 
+                            o autoarticolati) vengono valutati caso per caso in funzione di mezzi, 
+                            spazi, obiettivi e requisiti operativi.
+                          </p>
                         </div>
                       </div>
                     </div>
