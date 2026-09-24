@@ -1,35 +1,51 @@
-# Audit tecnico cookie, consenso e privacy – Guida Sicura VDA
+# Audit email e form contatti — Guida Sicura VDA (nessuna modifica applicata)
 
-Solo analisi: nessun file è stato modificato. Verifica fatta nel codice e con una visita reale al sito (browser mobile, nessun consenso dato).
+## 1. Indirizzo mostrato
+Solo `info@guidasicuravda.it`, sempre come link mailto:
+- Footer.tsx (tutte le pagine)
+- Contatti.tsx (blocco Email + messaggio di errore del form)
+- PrivacyPolicy.tsx (Titolare, diritti), CookiePolicy.tsx
+Nessun residuo di eo84.EO@gmail.com né numeri di telefono.
 
-## Cosa si carica prima del consenso (rilevato)
-```text
-googletagmanager.com/gtm.js?id=GTM-M4LWRNTD      Google Tag Manager
-googletagmanager.com/gtag/js?id=G-YMZ1JRKWLG     GA4
-scripts.clarity.ms + clarity.ms/tag/va1u0sab64   Microsoft Clarity (invia già dati: j.clarity.ms/collect)
-connect.facebook.net/en_US/fbevents.js           Meta (Facebook) Pixel  <-- non documentato
-api.lovable.dev/...                              script esterno non documentato
-Cookie scritti subito: _ga, _ga_YMZ1JRKWLG
-```
+## 2-3. Funzionamento form (Contatti.tsx)
+- `handleSubmit` → `fetch` POST JSON a Formspree `https://formspree.io/f/xpqvjjdl`.
+- Nessuna funzione server del progetto, nessun database: l'email la invia Formspree.
+- Destinatario: NON è nel codice, è configurato nell'account Formspree (non verificabile da qui).
+- Mittente: Formspree. Reply-To: Formspree usa il campo `email` solo se si chiama esattamente `email` o `_replyto` → qui si chiama `email`, quindi OK.
+- Validazioni: solo HTML (`required`, `type=email`, number min 1); checkbox privacy obbligatoria per abilitare il pulsante.
+- Successo: toast + reset form. Errore: toast con invito a scrivere a info@.
+- L'endpoint risponde (test HTTP 200), quindi il form è attivo.
 
-## Esito per punto
+## 4. Rischi
+- Destinatario sconosciuto (media): va controllato in Formspree che sia info@guidasicuravda.it e verificato.
+- Consegna (media): dominio su Aruba, SPF presente, DMARC `p=none`; le mail Formspree arrivano da loro, possibili finire in spam → controllare cartella spam.
+- Limite piano gratuito Formspree (~50 invii/mese) (media).
+- Doppio invio: bloccato dal pulsante disabilitato durante l'invio (basso).
+- Esposizione indirizzo: mailto in chiaro, rischio scraping spam (basso).
+- Il form ID è pubblico per natura (non è un segreto).
 
-1. **Tracker prima del consenso** – `index.html` + contenitore GTM. GTM, GA4, Clarity e Meta Pixel partono al caricamento. **Alta.** Correzione: caricare GTM solo dopo "Accetta", oppure attivare Consent Mode v2 con default "denied" e trigger condizionati nel contenitore.
-2. **GTM / GA4 / Clarity / altri** – GA4 e Clarity sono configurati dentro GTM (non nel codice). In GTM è presente anche il **Meta Pixel**, un tracker di marketing vietato dalle regole del progetto. **Alta.** Correzione: rimuovere il tag Meta dal contenitore GTM e pubblicare nuova versione.
-3. **Il banner blocca davvero?** – `src/components/CookieBanner.tsx`. No: salva solo `gsvda_cookie_consent` in localStorage, non comunica nulla a GTM. **Alta.** Correzione: al click inviare la scelta a GTM (`gtag('consent','update',…)` + evento dataLayer).
-4. **Accetta vs Rifiuta** – stesso effetto tecnico; dopo "Rifiuta" `_ga` resta presente e i tracker restano attivi. Anche la "X" su mobile vale Rifiuta (corretto). **Alta.** Correzione: collegata al punto 3.
-5. **Consent Mode v2** – assente: nessun `gtag('consent','default',…)` né parametri `ad_user_data`/`ad_personalization`. **Alta.** Correzione: blocco di default "denied" in `index.html` prima dello snippet GTM, update al consenso.
-6. **Coerenza con le policy** – `CookiePolicy.tsx`/`PrivacyPolicy.tsx` dichiarano GA4 e Clarity "solo previo consenso" e "nessun cookie di marketing né condivisione con piattaforme pubblicitarie": falso finché sono attivi caricamento anticipato e Meta Pixel. Il cookie tecnico è in realtà un valore localStorage senza scadenza (dichiarati 12 mesi). Contatto policy `info@guidasicuravda.it` coerente con il sito. **Alta.** Correzione: sistemare il comportamento (non il testo); poi precisare "localStorage" e implementare scadenza 12 mesi.
-7. **Script non documentati** – script `api.lovable.dev/…` in testa a `index.html` (inserito dalla piattaforma, non citato in policy) e Meta Pixel. **Media** (Lovable) / **Alta** (Meta). Correzione: rimuovere Meta; verificare la natura dello script Lovable e, se non necessario, eliminarlo o documentarlo.
-8. **Revoca/modifica consenso** – nessun modo: il banner non ricompare e la policy rimanda a "cancellare i cookie del browser" (che non cancella localStorage in modo evidente). **Media.** Correzione: link "Gestisci preferenze cookie" nel footer che riapre il banner.
-9. **Mobile / UX** – banner fisso in basso, pulsanti Rifiuta/Accetta di pari peso (corretto), ma su mobile copre parte di pagina; il testo non nomina Clarity/GA4. Nessun pulsante "Personalizza". **Bassa.** Correzione: citare gli strumenti nel testo; eventuale padding inferiore alla pagina mentre il banner è visibile.
-10. **Caricamenti ridondanti** – GTM caricato una sola volta; nessun doppio GA4 nel codice. Da verificare in GTM che GA4 non sia configurato due volte (tag Google + tag GA4). **Bassa.** Correzione: controllo contenitore.
+## 5. Segreti hardcoded
+Nessuno.
 
-## Correzione minimale proposta (quando vorrai)
-1. In GTM: eliminare il tag Meta Pixel; impostare GA4 e Clarity con requisito di consenso `analytics_storage`.
-2. `index.html`: Consent Mode v2 default "denied" prima di GTM.
-3. `CookieBanner.tsx`: su Accetta/Rifiuta inviare `consent update` a GTM; ad avvio leggere la scelta salvata e riapplicarla; scadenza 12 mesi.
-4. `Footer.tsx`: link "Gestisci preferenze cookie".
-5. Policy: aggiornare solo dicitura localStorage/revoca.
+## 7. Anti-spam
+Nessun honeypot, captcha o limite lato sito. Resta solo il filtro interno di Formspree (media).
 
-Approvando questo piano non verrà applicato nulla automaticamente senza tua indicazione esplicita di procedere con le correzioni.
+## 8. Privacy
+- Consenso coerente (checkbox obbligatoria). Mancano però nell'informativa: Formspree come responsabile esterno (USA) e i nuovi campi (tipo esigenza, partecipanti, località) (media).
+- Il valore del consenso non viene inviato insieme ai dati (bassa).
+
+## Correzioni proposte (da non applicare ora)
+1. Verificare in Formspree destinatario = info@guidasicuravda.it e piano/limiti.
+2. Aggiungere campo nascosto `_gotcha` (honeypot) e `_subject` descrittivo.
+3. Aggiornare Privacy Policy: Formspree + campi aggiuntivi.
+4. Inviare `consenso_privacy: true` con i dati.
+5. Opzionale: DMARC più restrittivo dopo verifica.
+
+## Verdetto
+PARZIALE: il form invia davvero tramite Formspree, ma destinatario non verificabile da codice, nessun anti-spam, informativa incompleta.
+
+## Test da telefono sul sito pubblico
+- Compilare il form con la propria email e controllare arrivo su info@ (anche spam) e che "Rispondi" vada al mittente.
+- Provare a inviare senza privacy: pulsante disabilitato.
+- Toccare l'email nel footer: si apre l'app mail.
+Nota: il sito pubblico va prima sbloccato dal ciclo di reindirizzamenti.
