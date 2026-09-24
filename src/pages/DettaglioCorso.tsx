@@ -16,11 +16,12 @@ const courseData: Record<string, {
   attivita: string[];
   destinatari: string[];
   nota: string;
+  livelloSuccessivo?: { id: string; label: string };
 }> = {
   "guida-sicura-base": {
     title: "Corso di Guida Sicura Base",
     subtitle: "Prevenzione del rischio stradale e in itinere",
-    finalita: "Prevenzione del rischio stradale e in itinere attraverso l'acquisizione delle tecniche fondamentali di guida sicura. Il corso fornisce le basi per una guida consapevole e orientata alla sicurezza, riducendo i comportamenti a rischio negli spostamenti quotidiani.",
+    finalita: "Prevenzione del rischio stradale e in itinere attraverso l'acquisizione delle tecniche fondamentali di guida sicura. Il corso costituisce il primo intervento sulla sicurezza stradale dei lavoratori e fornisce le basi per una guida consapevole e orientata alla sicurezza, riducendo i comportamenti a rischio negli spostamenti quotidiani.",
     durata: {
       totale: "8 ore",
       suddivisione: "Percorso integrato con attività in aula e sessioni pratiche guidate",
@@ -46,10 +47,14 @@ const courseData: Record<string, {
       "Aziende che avviano un percorso formativo sulla sicurezza stradale",
     ],
     nota: "Corso introduttivo, ideale come primo intervento formativo in azienda. Può essere propedeutico al corso avanzato.",
+    livelloSuccessivo: {
+      id: "guida-sicura-secondo-livello",
+      label: "Guida Sicura – 2° Livello",
+    },
   },
   "guida-sicura-secondo-livello": {
     title: "Guida Sicura – 2° Livello",
-    subtitle: "Formazione avanzata modulare per contesti professionali",
+    subtitle: "Formazione avanzata modulare per professionisti e flotte aziendali",
     finalita: "Sviluppare competenze avanzate di guida sicura, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti. Questo corso rappresenta il livello più alto del catalogo standard ed è la base di partenza per eventuali personalizzazioni tramite percorsi dedicati.",
     durata: {
       totale: "16 ore",
@@ -75,13 +80,14 @@ const courseData: Record<string, {
       "Quadri e dirigenti con uso frequente del veicolo",
       "Personale con elevato chilometraggio annuo",
       "RSPP e responsabili della prevenzione",
+      "Conducenti di flotte aziendali",
       "Fleet Manager e responsabili parco auto",
       "Personale addetto al trasporto persone o merci leggere",
     ],
     nota: "Livello più alto del catalogo standard. Può essere integrato con percorsi personalizzati definiti in base alle esigenze operative specifiche dell'azienda.",
   },
   "guida-emergenza-ambulanze": {
-    title: "Corso Guida Sicura Ambulanza / Emergenza",
+    title: "Corso di guida sicura per ambulanze e mezzi di soccorso",
     subtitle: "Guida in emergenza e tutela del paziente",
     finalita: "Gestione della guida in contesti di emergenza e alta responsabilità, garantendo sicurezza a operatori, paziente e utenti della strada. Il corso bilancia la necessità di rapidità operativa con il controllo del mezzo e la tutela di tutte le persone coinvolte.",
     durata: {
@@ -219,6 +225,19 @@ const DettaglioCorso = () => {
             <div className="p-6 bg-secondary rounded-lg mb-10">
               <p className="text-muted-foreground italic">{course.nota}</p>
             </div>
+
+            {/* Livello successivo */}
+            {course.livelloSuccessivo && (
+              <div className="mb-10">
+                <p className="text-sm font-semibold text-foreground mb-1">Livello successivo</p>
+                <Link
+                  to={`/corsi/${course.livelloSuccessivo.id}`}
+                  className="text-primary hover:underline inline-flex items-center gap-2"
+                >
+                  {course.livelloSuccessivo.label}
+                </Link>
+              </div>
+            )}
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">

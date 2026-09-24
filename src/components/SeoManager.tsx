@@ -11,36 +11,36 @@ interface SeoData {
 
 const routeMetadata: Record<string, SeoData> = {
   "/": {
-    title: "Guida Sicura VDA | Formazione alla guida sicura",
-    description: "Formazione pratica alla guida sicura per aziende, enti, flotte, professionisti e servizi di emergenza.",
+    title: "Guida sicura in Valle d'Aosta per aziende e professionisti | Guida Sicura VDA",
+    description: "Formazione pratica alla guida sicura in Valle d'Aosta per aziende, flotte, enti e servizi di soccorso. Esercitazioni su piazzali, piste e aree idonee.",
   },
   "/corsi": {
-    title: "Corsi di guida sicura per aziende | Guida Sicura VDA",
-    description: "Corsi di guida sicura, guida professionale e guida in emergenza per aziende, enti, flotte e operatori professionali.",
+    title: "Corsi di guida sicura per aziende, flotte e professionisti | Guida Sicura VDA",
+    description: "Corsi di guida sicura, guida professionale e guida in emergenza per aziende, flotte aziendali ed enti. In Valle d'Aosta e fuori regione su richiesta.",
   },
   "/corsi/guida-sicura-base": {
-    title: "Corso di Guida Sicura Base | Guida Sicura VDA",
-    description: "Corso base per la prevenzione del rischio stradale e l'acquisizione delle tecniche fondamentali di guida sicura.",
+    title: "Corso di guida sicura base per lavoratori | Guida Sicura VDA",
+    description: "Corso di 8 ore sulla sicurezza stradale dei lavoratori: prevenzione del rischio stradale e in itinere, con esercitazioni pratiche su piazzali e aree idonee.",
   },
   "/corsi/guida-sicura-secondo-livello": {
-    title: "Guida Sicura – 2° Livello | Guida Sicura VDA",
-    description: "Formazione avanzata modulare sulla percezione del rischio e sulla prevenzione attiva per conducenti professionali.",
+    title: "Corso di guida sicura per professionisti – 2° Livello | Guida Sicura VDA",
+    description: "Formazione avanzata modulare di 16 ore per conducenti professionali e flotte aziendali: percezione del rischio e prevenzione attiva.",
   },
   "/corsi/guida-emergenza-ambulanze": {
-    title: "Guida Sicura Ambulanza ed Emergenza | Guida Sicura VDA",
-    description: "Corso specialistico per la guida sicura dei mezzi di soccorso, rivolto a operatori dell'emergenza sanitaria.",
+    title: "Guida sicura dei mezzi di soccorso e ambulanze | Guida Sicura VDA",
+    description: "Corso specialistico di 16 ore sulla guida sicura dei mezzi di soccorso, per operatori dell'emergenza sanitaria, vigili del fuoco ed enti.",
   },
   "/metodo": {
-    title: "Metodo formativo | Guida Sicura VDA",
+    title: "Metodo formativo di guida sicura | Guida Sicura VDA",
     description: "Metodo di formazione pratica e progressiva, adattato ai contesti operativi di aziende, enti e servizi di emergenza.",
   },
   "/istruttori": {
-    title: "Istruttori qualificati | Guida Sicura VDA",
-    description: "Istruttori qualificati con esperienza nella formazione alla guida sicura, professionale e operativa in emergenza.",
+    title: "Istruttori di guida sicura AssoFormatori | Guida Sicura VDA",
+    description: "Istruttori di guida sicura associati AssoFormatori, con esperienza nella formazione professionale e operativa in emergenza in Valle d'Aosta.",
   },
   "/contatti": {
-    title: "Contatti e richieste corsi | Guida Sicura VDA",
-    description: "Contatta Guida Sicura VDA per informazioni sui percorsi formativi e sulle modalità di erogazione dei corsi.",
+    title: "Richiedi un corso di guida sicura | Guida Sicura VDA",
+    description: "Richiedi informazioni sui corsi di guida sicura per aziende, flotte ed enti. Operativi in Valle d'Aosta, corsi anche fuori regione.",
   },
   "/privacy-policy": {
     title: "Privacy Policy | Guida Sicura VDA",

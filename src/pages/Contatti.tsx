@@ -90,7 +90,7 @@ const Contatti = () => {
       {/* Page Header */}
       <section className="page-header">
         <div className="section-container">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Contatti</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Contatti e richieste corsi</h1>
           <p className="text-lg text-primary-foreground/80 max-w-2xl">
             Richiedi informazioni sui nostri corsi o fissa un incontro 
             conoscitivo per valutare insieme le tue esigenze formative.

@@ -12,7 +12,7 @@ const Metodo = () => {
       {/* Page Header */}
       <section className="page-header">
         <div className="section-container">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Il Metodo</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Il metodo formativo</h1>
           <p className="text-lg text-primary-foreground/80 max-w-2xl">
             Un approccio formativo basato sulla pratica, sulla progressione 
             e sull'adattamento al contesto operativo reale.
@@ -174,9 +174,14 @@ const Metodo = () => {
               <p className="text-muted-foreground mb-4">
                 Vuoi saperne di più sul nostro approccio formativo?
               </p>
-              <Button variant="default" size="lg" asChild>
-                <Link to="/contatti">Contattaci</Link>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button variant="default" size="lg" asChild>
+                  <Link to="/contatti">Contattaci</Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/corsi">Vedi i corsi</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
