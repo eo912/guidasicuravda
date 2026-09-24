@@ -173,13 +173,13 @@ const Corsi = () => {
                         </div>
                         <div className="flex-1">
                           <h3 className="text-xl font-bold text-foreground mb-2">
-                            Moduli opzionali
+                            Percorsi personalizzati
                           </h3>
                           <p className="text-sm text-muted-foreground mb-2">
-                            I moduli consentono di adattare il corso alle specifiche condizioni operative e ai profili dei conducenti.
+                            I percorsi personalizzati consentono di adattare la formazione alle specifiche condizioni operative e ai profili dei conducenti.
                           </p>
                           <p className="text-sm text-foreground font-medium mb-6">
-                            I moduli vengono definiti a seguito di colloquio conoscitivo con l'azienda.
+                            I percorsi vengono definiti a seguito di colloquio conoscitivo con l'azienda.
                           </p>
                           
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
