@@ -75,7 +75,9 @@ const PrivacyPolicy = () => {
                 </h2>
                 <p className="text-muted-foreground mb-4">
                   Il sito utilizza i seguenti strumenti di analisi, attivati solo previo consenso 
-                  espresso tramite il banner cookie:
+                  espresso tramite il banner cookie. La preferenza è salvata nel localStorage del 
+                  browser per 12 mesi e può essere modificata o revocata in qualsiasi momento tramite 
+                  il link "Gestisci preferenze cookie" nel footer del sito:
                 </p>
                 
                 <p className="text-muted-foreground mb-4">

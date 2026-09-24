@@ -45,7 +45,7 @@ const CookiePolicy = () => {
                     Non richiedono il consenso dell'utente e non possono essere disabilitati.
                   </p>
                   <ul className="text-muted-foreground text-sm list-disc pl-5 space-y-1">
-                    <li><strong>gsvda_cookie_consent</strong> – memorizza le preferenze di consenso cookie (durata: 12 mesi)</li>
+                    <li><strong>gsvda_cookie_consent</strong> – preferenza di consenso salvata nel localStorage del browser, con data della scelta e scadenza (durata: 12 mesi, al termine la scelta viene richiesta nuovamente)</li>
                   </ul>
                 </div>
 
@@ -112,12 +112,18 @@ const CookiePolicy = () => {
                 </h2>
                 <p className="text-muted-foreground mb-4">
                   Al primo accesso al sito, ti viene mostrato un banner che ti permette 
-                  di accettare o rifiutare i cookie di analisi. La tua scelta viene 
-                  memorizzata per le visite successive.
+                  di accettare o rifiutare i cookie di analisi. Fino alla tua scelta, e in caso 
+                  di rifiuto, Google Analytics 4 e Microsoft Clarity restano in stato di consenso 
+                  negato (Google Consent Mode v2). Nessun consenso viene mai attivato per finalità 
+                  pubblicitarie. La tua scelta viene memorizzata per 12 mesi.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Puoi modificare o revocare il consenso in qualsiasi momento tramite il link 
+                  "Gestisci preferenze cookie" presente nel footer di ogni pagina, che riapre il banner.
                 </p>
                 <p className="text-muted-foreground">
-                  Puoi modificare le tue preferenze in qualsiasi momento eliminando 
-                  i cookie dal tuo browser. Di seguito le istruzioni per i principali browser:
+                  In alternativa puoi eliminare i cookie e i dati dei siti dal tuo browser. 
+                  Di seguito le istruzioni per i principali browser:
                 </p>
                 <ul className="list-disc pl-6 text-muted-foreground space-y-1 mt-4 text-sm">
                   <li>Chrome: Impostazioni → Privacy e sicurezza → Cookie</li>
