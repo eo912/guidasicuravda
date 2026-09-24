@@ -167,7 +167,7 @@ const Corsi = () => {
                   </div>
                 </div>
 
-                {/* Moduli Opzionali - displayed right after 2° Livello */}
+                {/* Percorsi personalizzati - displayed right after 2° Livello */}
                 {course.hasModules && (
                   <div className="mt-6 ml-0 lg:ml-22">
                     <div className="card-professional">

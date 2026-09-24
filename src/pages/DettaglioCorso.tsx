@@ -50,7 +50,7 @@ const courseData: Record<string, {
   "guida-sicura-secondo-livello": {
     title: "Guida Sicura – 2° Livello",
     subtitle: "Formazione avanzata modulare per contesti professionali",
-    finalita: "Sviluppare competenze avanzate di guida sicura, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti. Questo corso rappresenta il livello più alto del catalogo standard ed è la base di partenza per eventuali personalizzazioni tramite moduli opzionali.",
+    finalita: "Sviluppare competenze avanzate di guida sicura, focalizzate sulla percezione del rischio e sulla prevenzione attiva degli incidenti. Questo corso rappresenta il livello più alto del catalogo standard ed è la base di partenza per eventuali personalizzazioni tramite percorsi dedicati.",
     durata: {
       totale: "16 ore",
       suddivisione: "Percorso integrato con attività in aula e sessioni pratiche su piazzale e percorsi simulati",
@@ -78,7 +78,7 @@ const courseData: Record<string, {
       "Fleet Manager e responsabili parco auto",
       "Personale addetto al trasporto persone o merci leggere",
     ],
-    nota: "Livello più alto del catalogo standard. Può essere integrato con moduli opzionali definiti in base alle esigenze operative specifiche dell'azienda.",
+    nota: "Livello più alto del catalogo standard. Può essere integrato con percorsi personalizzati definiti in base alle esigenze operative specifiche dell'azienda.",
   },
   "guida-emergenza-ambulanze": {
     title: "Corso Guida Sicura Ambulanza / Emergenza",
