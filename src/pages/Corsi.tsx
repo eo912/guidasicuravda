@@ -22,6 +22,7 @@ const courses = [
   },
   {
     id: "guida-sicura-secondo-livello",
+    famiglia: "Guida Professionale",
     title: "Guida Sicura – 2° Livello",
     subtitle: "Formazione avanzata modulare per contesti professionali",
     icon: Shield,
@@ -40,6 +41,7 @@ const courses = [
   },
   {
     id: "guida-emergenza-ambulanze",
+    famiglia: "Guida in Emergenza",
     title: "Corso Guida Sicura Ambulanza / Emergenza",
     icon: Ambulance,
     finalita: "Gestione della guida in contesti di emergenza e alta responsabilità, garantendo sicurezza a operatori, paziente e utenti della strada.",
