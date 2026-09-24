@@ -62,6 +62,15 @@ const Footer = () => {
                   Cookie Policy
                 </Link>
               </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={openCookiePreferences}
+                  className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors text-left"
+                >
+                  Gestisci preferenze cookie
+                </button>
+              </li>
             </ul>
           </div>
 

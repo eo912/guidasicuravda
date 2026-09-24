@@ -3,6 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     
+    <!-- Consent Mode v2: default negato prima di GTM -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+      try {
+        var c = JSON.parse(localStorage.getItem('gsvda_cookie_consent') || 'null');
+        if (c && c.status === 'accepted' && c.expires > Date.now()) {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
+      } catch (e) {}
+    </script>
     <!-- Google Tag Manager -->
     <script type='text/javascript' src='https://api.lovable.dev/n9Kki5GfGol2k-mg33ph2yGqWYA0mp8XN4u-Uri7ddcyLoa5c4aOJBKncY8pcdEL96k62Q-_1S8136iZJo7jb5XGy-Po4UbrcyzkunYsxMSQhorcO8IyedeBesmHhwQDLk0D_n_fauX3JG4TFvGoP1s3FCrL8wIw2FKRPRVrS2Scgsnrl9jvbeyhaJN9upBt6WsWVmDMg0PbKJ8qvNFi283_kxiBeiWQPfCx5B1W3im1NmCiybPu_5ioxUobkMdLJGfzWUVq4aQs6JKZUfQ8DDtBzYO6kJj67ml-cWOf7Qwzy2MiZES211TKWpGh6KpCh_a7_WQZ3vkFPAc5ULjKZEFjv-rJXT2NFNGPRsb-DjyPHMsS1Ugqq9vebwj3o8AnhNNepsqy4gIqp01MsH0tqVzfSETugmoPzDF7h984o9jVKq-sGLBF4883khMUttjCrfOP91FzmrrG1kkjk0GSNwSbKueMMrDhnnof3Hr13g3XF4ObPxzNWJY_yo-IT4zHXN2CE90AEhnO1Qf4cHkKegV7R9MS_KPDJEm9kKu2iDxMwL4'></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
