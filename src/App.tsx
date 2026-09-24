@@ -14,6 +14,7 @@ import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 import CookieBanner from "./components/CookieBanner";
 import ScrollToTop from "./components/ScrollToTop";
+import SeoManager from "./components/SeoManager";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <SeoManager />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/corsi" element={<Corsi />} />

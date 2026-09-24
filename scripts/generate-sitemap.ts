@@ -5,7 +5,6 @@ const BASE_URL = "https://guidasicuravda.it";
 
 interface SitemapEntry {
   path: string;
-  lastmod?: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   priority?: string;
 }
@@ -13,6 +12,9 @@ interface SitemapEntry {
 const entries: SitemapEntry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
   { path: "/corsi", changefreq: "weekly", priority: "0.8" },
+  { path: "/corsi/guida-sicura-base", changefreq: "monthly", priority: "0.7" },
+  { path: "/corsi/guida-sicura-secondo-livello", changefreq: "monthly", priority: "0.7" },
+  { path: "/corsi/guida-emergenza-ambulanze", changefreq: "monthly", priority: "0.7" },
   { path: "/metodo", changefreq: "monthly", priority: "0.7" },
   { path: "/istruttori", changefreq: "monthly", priority: "0.7" },
   { path: "/contatti", changefreq: "monthly", priority: "0.6" },
@@ -21,12 +23,10 @@ const entries: SitemapEntry[] = [
 ];
 
 function generateSitemap(entries: SitemapEntry[]) {
-  const today = new Date().toISOString().split("T")[0];
   const urls = entries.map((e) =>
     [
       `  <url>`,
       `    <loc>${BASE_URL}${e.path}</loc>`,
-      `    <lastmod>${today}</lastmod>`,
       e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
       e.priority ? `    <priority>${e.priority}</priority>` : null,
       `  </url>`,
