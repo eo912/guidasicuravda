@@ -23,7 +23,7 @@ const Index = () => {
               Guida Sicura VDA
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 text-balance">
-              Formazione pratica alla guida sicura per aziende e professionisti
+              Formazione pratica alla guida sicura in Valle d'Aosta per aziende e professionisti
             </h1>
             <p className="text-lg text-primary-foreground/70 mb-8 max-w-xl">
               Corsi strutturati per migliorare la sicurezza alla guida in ambito lavorativo. 
@@ -131,7 +131,12 @@ const Index = () => {
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-accent rounded-full mt-2.5 flex-shrink-0" />
                   <div>
-                    <span className="font-semibold text-foreground">Servizi di emergenza e soccorso</span>
+                    <Link
+                      to="/corsi/guida-emergenza-ambulanze"
+                      className="font-semibold text-foreground hover:text-primary transition-colors"
+                    >
+                      Servizi di emergenza e soccorso
+                    </Link>
                     <p className="text-muted-foreground text-sm">
                       Personale sanitario, vigili del fuoco e operatori del soccorso che guidano in condizioni critiche
                     </p>
@@ -149,7 +154,12 @@ const Index = () => {
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-accent rounded-full mt-2.5 flex-shrink-0" />
                   <div>
-                    <span className="font-semibold text-foreground">Flotte aziendali</span>
+                    <Link
+                      to="/corsi/guida-sicura-secondo-livello"
+                      className="font-semibold text-foreground hover:text-primary transition-colors"
+                    >
+                      Flotte aziendali
+                    </Link>
                     <p className="text-muted-foreground text-sm">
                       Fleet Manager e responsabili che gestiscono parchi veicoli aziendali
                     </p>
@@ -172,7 +182,7 @@ const Index = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0" />
-                  <p className="text-muted-foreground text-sm">Erogazione in Valle d'Aosta o presso la vostra sede e strutture idonee</p>
+                  <p className="text-muted-foreground text-sm">Erogazione in Valle d'Aosta, compresa l'area di Courmayeur, e anche fuori regione su richiesta, presso la vostra sede o strutture idonee</p>
                 </li>
               </ul>
               <Button variant="default" size="lg" asChild>
