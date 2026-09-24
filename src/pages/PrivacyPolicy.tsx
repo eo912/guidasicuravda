@@ -114,6 +114,36 @@ const PrivacyPolicy = () => {
 
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-4">
+                  4-bis. Gestione del modulo di contatto
+                </h2>
+                <p className="text-muted-foreground mb-4">
+                  Il modulo di contatto presente sul sito è gestito tramite il servizio 
+                  <strong> Formspree</strong> (Formspree Inc.), che riceve, archivia e inoltra 
+                  al Titolare le richieste inviate dagli utenti, agendo come responsabile del 
+                  trattamento.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  Formspree utilizza un'infrastruttura situata negli Stati Uniti: l'invio del 
+                  modulo comporta quindi un trasferimento dei dati al di fuori dell'Unione Europea. 
+                  Per tali trasferimenti Formspree dichiara di fare affidamento sulle Clausole 
+                  Contrattuali Standard (Standard Contractual Clauses) approvate dalla Commissione 
+                  Europea.
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  Informazioni del fornitore: 
+                  <a
+                    href="https://formspree.io/security/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline ml-1"
+                  >
+                    formspree.io/security
+                  </a>
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-bold text-foreground mb-4">
                   5. Base giuridica del trattamento
                 </h2>
                 <p className="text-muted-foreground mb-4">
