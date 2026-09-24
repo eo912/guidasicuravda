@@ -12,7 +12,7 @@ const Istruttori = () => {
       {/* Page Header */}
       <section className="page-header">
         <div className="section-container">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Istruttori</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Gli istruttori</h1>
           <p className="text-lg text-primary-foreground/80 max-w-2xl">
             Professionisti qualificati con esperienza nella formazione 
             alla guida sicura.
@@ -29,14 +29,18 @@ const Istruttori = () => {
               <p className="text-foreground leading-relaxed">
                 I corsi di Guida Sicura VDA sono erogati da istruttori qualificati 
                 che operano come liberi professionisti in collaborazione. Entrambi 
-                gli istruttori sono associati ad AssoFormatori.
+                gli istruttori sono associati ad AssoFormatori e lavorano secondo{" "}
+                <Link to="/metodo" className="text-primary hover:underline">
+                  il metodo formativo
+                </Link>{" "}
+                adottato da Guida Sicura VDA.
               </p>
             </div>
 
             {/* Instructors */}
             <div className="space-y-8">
               <h2 className="text-2xl font-bold text-foreground mb-6">
-                Gli istruttori
+                Profili
               </h2>
               
               {/* Patrik Petigat */}
