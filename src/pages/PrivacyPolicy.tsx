@@ -46,7 +46,11 @@ const PrivacyPolicy = () => {
                   <li>Indirizzo email</li>
                   <li>Numero di telefono (facoltativo)</li>
                   <li>Nome dell'ente o organizzazione (facoltativo)</li>
+                  <li>Tipo di esigenza o corso di interesse</li>
+                  <li>Numero indicativo di partecipanti (facoltativo)</li>
+                  <li>Località desiderata per lo svolgimento (facoltativo)</li>
                   <li>Contenuto del messaggio</li>
+                  <li>Evidenza dell'accettazione della presente informativa, richiesta per poter inviare il modulo</li>
                 </ul>
               </div>
 
