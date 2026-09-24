@@ -90,11 +90,13 @@ const Corsi = () => {
       {/* Page Header */}
       <section className="page-header">
         <div className="section-container">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">I Corsi</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Corsi di guida sicura per aziende e professionisti</h1>
           <p className="text-lg text-primary-foreground/80 max-w-2xl">
             Percorsi formativi strutturati per sviluppare competenze di guida sicura 
             in ambito professionale. Ogni corso è progettato per rispondere alle 
-            esigenze operative delle aziende e può essere adattato a contesti specifici.
+            esigenze operative delle aziende e può essere adattato a contesti specifici. 
+            I corsi si svolgono in Valle d'Aosta e, su richiesta, presso aziende o 
+            strutture idonee fuori regione.
           </p>
         </div>
       </section>
@@ -239,7 +241,13 @@ const Corsi = () => {
                                 {moduliOpzionali.operativo.map((modulo, index) => (
                                   <li key={index} className="text-sm text-muted-foreground flex items-start gap-2">
                                     <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0" />
-                                    {modulo}
+                                    {modulo === "Flotte aziendali" ? (
+                                      <Link to="/contatti" className="hover:text-primary transition-colors">
+                                        {modulo}
+                                      </Link>
+                                    ) : (
+                                      modulo
+                                    )}
                                   </li>
                                 ))}
                               </ul>
