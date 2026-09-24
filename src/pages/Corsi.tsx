@@ -34,7 +34,7 @@ const courses = [
       "Gestione intersezioni e punti ciechi",
       "Esercitazioni pratiche su visione, distanza, evitamento ostacoli",
     ],
-    nota: "Livello più alto del catalogo standard. Può essere integrato con moduli opzionali.",
+    nota: "Livello più alto del catalogo standard. Può essere integrato con percorsi personalizzati.",
     hasModules: true,
   },
   {
@@ -74,10 +74,10 @@ const moduliOpzionali = {
     "Veicoli elettrici e ibridi",
   ],
   operativo: [
-    "Trasporto merci sensibili",
-    "Interventi in emergenza",
-    "Gestione flotte aziendali",
-    "Logistica e consegne",
+    "Conducenti NCC ed executive",
+    "Personale di enti e servizi",
+    "Flotte aziendali",
+    "Esigenze operative specifiche",
   ],
 };
 
