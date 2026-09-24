@@ -11,7 +11,7 @@
 ## Da affrontare separatamente (esclusi per vincolo)
 - Consenso cookie/GTM, script head, SEO per pagina, sitemap schede corso, aria-label menu mobile, pagina 404
 
-## Intervento tecnico SEO, sitemap, 404 e accessibilità — IN ATTESA DI APPROVAZIONE
+## Intervento tecnico SEO, sitemap, 404 e accessibilità — IN CORSO
 - [ ] Metadati specifici per Home, pagine principali, pagine legali, 3 schede corso e 404
 - [ ] Open Graph/Twitter con immagine alpina esistente in formato social
 - [ ] Sitemap completa senza lastmod automatici; verifica robots.txt
