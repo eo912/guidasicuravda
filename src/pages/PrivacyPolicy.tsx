@@ -116,11 +116,17 @@ const PrivacyPolicy = () => {
                 <h2 className="text-xl font-bold text-foreground mb-4">
                   5. Base giuridica del trattamento
                 </h2>
+                <p className="text-muted-foreground mb-4">
+                  La gestione delle richieste inviate tramite il modulo di contatto si basa 
+                  sulla necessità di eseguire misure precontrattuali richieste dall'interessato 
+                  (art. 6, par. 1, lett. b del GDPR). Quando la richiesta non è riconducibile 
+                  a misure precontrattuali, il trattamento si basa sul legittimo interesse del 
+                  Titolare a rispondere a chi lo contatta (art. 6, par. 1, lett. f del GDPR).
+                </p>
                 <p className="text-muted-foreground">
-                  Il trattamento dei dati si basa sul consenso espresso dall'utente 
-                  al momento della compilazione del modulo di contatto (art. 6, par. 1, 
-                  lett. a del GDPR) e sulla necessità di eseguire misure precontrattuali 
-                  richieste dall'interessato (art. 6, par. 1, lett. b del GDPR).
+                  L'utilizzo degli strumenti di analisi statistica indicati al punto 4 si basa 
+                  esclusivamente sul consenso dell'utente (art. 6, par. 1, lett. a del GDPR), 
+                  revocabile in qualsiasi momento.
                 </p>
               </div>
 
@@ -128,12 +134,18 @@ const PrivacyPolicy = () => {
                 <h2 className="text-xl font-bold text-foreground mb-4">
                   6. Modalità di trattamento e conservazione
                 </h2>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground mb-4">
                   I dati sono trattati con strumenti informatici e/o cartacei, con 
-                  misure di sicurezza adeguate a garantirne la riservatezza. I dati 
-                  vengono conservati per il tempo strettamente necessario a rispondere 
-                  alle richieste ricevute e, in caso di instaurazione di rapporti 
-                  contrattuali, per il periodo previsto dalla normativa fiscale e civile.
+                  misure di sicurezza adeguate a garantirne la riservatezza.
+                </p>
+                <p className="text-muted-foreground">
+                  I dati relativi alle richieste di contatto sono conservati per il tempo 
+                  necessario a gestire la richiesta e comunque per un periodo massimo di 
+                  24 mesi dalla chiusura della richiesta o dall'ultima interazione ad essa 
+                  collegata, salvo l'ulteriore conservazione necessaria per adempiere a obblighi 
+                  di legge o per la tutela dei diritti del Titolare. In caso di instaurazione 
+                  di rapporti contrattuali, i dati sono conservati per il periodo previsto 
+                  dalla normativa fiscale e civile.
                 </p>
               </div>
 
@@ -141,12 +153,19 @@ const PrivacyPolicy = () => {
                 <h2 className="text-xl font-bold text-foreground mb-4">
                   7. Comunicazione e diffusione dei dati
                 </h2>
+                <p className="text-muted-foreground mb-4">
+                  I dati personali non vengono diffusi. Possono essere trattati, per nostro 
+                  conto e limitatamente a quanto necessario, dai fornitori tecnici che agiscono 
+                  come responsabili del trattamento: Formspree Inc. (gestione del modulo di 
+                  contatto, punto 4-bis), Google Ireland Limited e Microsoft Ireland Operations 
+                  Limited (dati di analisi statistica, punto 4).
+                </p>
                 <p className="text-muted-foreground">
-                  I dati personali non vengono diffusi né comunicati a terzi, salvo 
-                  eventuali obblighi di legge o quanto indicato al punto 4 (Google Ireland Limited 
-                  e Microsoft Ireland Operations Limited per i dati di analytics). Non trasferiamo 
-                  dati verso paesi extra-UE, ad eccezione dei dati di analytics trattati in conformità 
-                  alle Clausole Contrattuali Standard approvate dalla Commissione Europea.
+                  Al di fuori di questi fornitori, i dati non vengono comunicati a terzi, salvo 
+                  eventuali obblighi di legge o necessità di tutela dei diritti del Titolare. 
+                  I trasferimenti verso paesi extra-UE riguardano esclusivamente i fornitori 
+                  sopra indicati e avvengono sulla base delle Clausole Contrattuali Standard 
+                  approvate dalla Commissione Europea.
                 </p>
               </div>
 
@@ -187,7 +206,7 @@ const PrivacyPolicy = () => {
                   ultimo aggiornamento.
                 </p>
                 <p className="text-muted-foreground mt-4 text-sm">
-                   Ultimo aggiornamento: Gennaio 2026
+                   Ultimo aggiornamento: 24 settembre 2026
                  </p>
                </div>
 
