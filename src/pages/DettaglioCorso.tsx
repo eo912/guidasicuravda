@@ -226,6 +226,19 @@ const DettaglioCorso = () => {
               <p className="text-muted-foreground italic">{course.nota}</p>
             </div>
 
+            {/* Livello successivo */}
+            {course.livelloSuccessivo && (
+              <div className="mb-10">
+                <p className="text-sm font-semibold text-foreground mb-1">Livello successivo</p>
+                <Link
+                  to={`/corsi/${course.livelloSuccessivo.id}`}
+                  className="text-primary hover:underline inline-flex items-center gap-2"
+                >
+                  {course.livelloSuccessivo.label}
+                </Link>
+              </div>
+            )}
+
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="default" size="lg" asChild>
