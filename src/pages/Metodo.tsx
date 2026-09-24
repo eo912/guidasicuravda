@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Users, Shield, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
-import logoAssoformatori from "@/assets/logo-assoformatori.jpg";
+import logoAssoFormatori from "@/assets/logo-assoformatori.jpg";
 import logoCts from "@/assets/logo-cts.jpg";
 import logoRina from "@/assets/logo-rina-iso9001.jpg";
 
@@ -137,7 +137,7 @@ const Metodo = () => {
               <div className="text-muted-foreground space-y-4 mb-8">
                 <p>
                   Il progetto Guida Sicura VDA si basa su contenuti formativi certificati 
-                  Assoformatori, erogati tramite la relativa piattaforma.
+                  AssoFormatori, erogati tramite la relativa piattaforma.
                 </p>
                 <p>
                   L'impianto del corso, le variabili operative e i materiali di supporto 
@@ -152,8 +152,8 @@ const Metodo = () => {
               {/* Loghi riferimenti formativi */}
               <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
                 <img 
-                  src={logoAssoformatori} 
-                  alt="Assoformatori" 
+                  src={logoAssoFormatori} 
+                  alt="AssoFormatori" 
                   className="h-14 md:h-16 w-auto object-contain"
                 />
                 <img 

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Users, Target } from "lucide-react";
 import Layout from "@/components/Layout";
 import heroImage from "@/assets/hero-driving.jpg";
-import logoAssoformatori from "@/assets/logo-assoformatori.jpg";
+import logoAssoFormatori from "@/assets/logo-assoformatori.jpg";
 
 const Index = () => {
   return (
@@ -193,8 +193,8 @@ const Index = () => {
               Sistema formativo di riferimento
             </p>
             <img 
-              src={logoAssoformatori} 
-              alt="Assoformatori" 
+              src={logoAssoFormatori} 
+              alt="AssoFormatori" 
               className="h-16 md:h-20 w-auto mx-auto object-contain"
             />
           </div>

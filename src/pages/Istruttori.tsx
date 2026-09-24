@@ -78,19 +78,19 @@ const Istruttori = () => {
                 </div>
               </div>
 
-              {/* Orlarei Edy */}
+              {/* Edy Orlarei */}
               <div className="card-professional">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
                   <div className="flex-shrink-0">
                     <img 
                       src={edyPhoto} 
-                      alt="Orlarei Edy" 
+                      alt="Edy Orlarei" 
                       className="w-28 h-28 object-cover rounded-lg"
                     />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-foreground mb-2">
-                      Orlarei Edy
+                      Edy Orlarei
                     </h3>
                     <p className="text-muted-foreground mb-4">
                       Istruttore di guida sicura – Associato Assoformatori
