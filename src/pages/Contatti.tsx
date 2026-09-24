@@ -47,6 +47,9 @@ const Contatti = () => {
           email: formData.email,
           telefono: formData.telefono,
           azienda: formData.azienda,
+          tipo_esigenza: formData.tipoEsigenza,
+          numero_partecipanti: formData.partecipanti,
+          localita: formData.localita,
           messaggio: formData.messaggio,
         }),
       });
